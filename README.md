@@ -355,26 +355,135 @@ AI 不得擅自承诺价格、交期、认证和企业未确认的产品能力�
 
 ## 7. Product Architecture Principles
 
-技术实现应遵循：
+## 7. Technology Stack
+
+Exporbit adopts a Python-based AI backend, a React-based frontend, and PostgreSQL as its primary relational database.
+
+The architecture follows a modular monolith approach with replaceable AI and knowledge providers.
+
+Technology decisions are classified into:
+
+- **Selected**: Approved baseline technology.
+- **To Validate**: Candidate requiring proof-of-concept validation.
+- **Deferred**: Not required for the initial MVP.
+
+### 7.1 Frontend
+
+| Technology | Purpose | Status |
+|---|---|---|
+| React | UI framework | Selected |
+| TypeScript | Type safety | Selected |
+| Vite | Development and build tooling | Selected |
+| Tailwind CSS | Styling | Selected |
+| shadcn/ui | UI components | Selected |
+| TanStack Query | Server-state management | To Validate |
+| Vitest | Frontend testing | To Validate |
+
+### 7.2 Backend
+
+| Technology | Purpose | Status |
+|---|---|---|
+| Python 3.12+ | Core application language | Selected |
+| FastAPI | API framework | Selected |
+| Pydantic | Data validation and schemas | Selected |
+| SQLAlchemy 2.x | ORM | Selected |
+| Alembic | Database migrations | Selected |
+| Pytest | Backend testing | Selected |
+
+### 7.3 Database and Storage
+
+| Technology | Purpose | Status |
+|---|---|---|
+| PostgreSQL | Primary relational database | Selected |
+| Local File Storage | Initial file storage | Selected |
+| S3-compatible Storage | Future production object storage | To Validate |
+| pgvector | Vector retrieval | Deferred |
+
+### 7.4 AI and Workflow
+
+| Technology | Purpose | Status |
+|---|---|---|
+| DeepSeek API | Initial LLM provider | Selected |
+| LLM Provider Adapter | Model independence | Selected |
+| Python Services | Business logic and orchestration | Selected |
+| LangGraph | Stateful workflow orchestration | To Validate |
+| RAG | Enterprise knowledge retrieval | To Validate |
+| Langfuse | LLM observability | Deferred |
+
+### 7.5 Knowledge Providers
+
+The knowledge layer must remain independent from any single source.
+
+Planned providers:
+
+- Zhihu Knowledge Provider
+- Overseas Web Search Provider
+- Official Information Provider
+- Enterprise Knowledge Provider
+
+External integrations must be verified before being marked as operational.
+
+No undocumented or unauthorized API should be assumed available.
+
+### 7.6 Deployment
+
+| Technology | Purpose | Status |
+|---|---|---|
+| Docker | Containerization | Selected |
+| Docker Compose | Local and MVP deployment | Selected |
+| Nginx | Reverse proxy | To Validate |
+| Kubernetes | Container orchestration | Deferred |
+
+### 7.7 Architecture Decisions
+
+Exporbit follows these principles:
 
 1. Modular Monolith First
-2. Clear Business Domain Boundaries
+2. API-first Backend
 3. Provider Abstraction
 4. Evidence Traceability
-5. Explicit Data Status
-6. Human-in-the-loop
+5. Human-in-the-loop
+6. Explicit Data Status
 7. Failure Isolation
 8. Incremental Development
 
-不要为了使用热门框架而增加系统复杂度。
+Do not introduce infrastructure without a demonstrated business requirement.
 
-具体技术栈必须经过独立评估和 POC 验证。
-
-不要在技术选型尚未确认时，将候选技术描述为已经采用。
+The selected technology stack is a baseline, not a reason to avoid future evidence-based improvements.
 
 ---
 
-## 8. Project Status
+## 8. System Architecture Overview
+
+```text
+                 Exporbit Frontend
+               React + TypeScript
+                        |
+                     REST API
+                        |
+                 FastAPI Backend
+                        |
+              Application Services
+                        |
+                 Business Domains
+           /            |            \
+      Inquiry       Knowledge      Evidence
+      Product       Customer       Communication
+           \            |            /
+                  Provider Layer
+                 /       |       \
+               LLM     Search   Documents
+                |        |         |
+             DeepSeek  Zhihu    File Parser
+                        |
+                   PostgreSQL
+                        |
+                  File Storage
+```
+
+This diagram represents the intended architecture. Actual implementation status must be reported separately.
+
+## 9. Project Status
 
 当前阶段：
 
@@ -410,7 +519,7 @@ AI 不得擅自承诺价格、交期、认证和企业未确认的产品能力�
 
 ---
 
-## 9. Repository Documentation
+## 10. Repository Documentation
 
 核心文档：
 
@@ -436,7 +545,7 @@ docs/
 
 ---
 
-## 10. Development Guidelines
+## 11. Development Guidelines
 
 所有开发工作遵循：
 
