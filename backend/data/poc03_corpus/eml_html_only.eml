@@ -1,0 +1,9 @@
+From: buyer@example.com
+To: sales@exporbit.example
+Subject: HTML inquiry
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>We need 2000 smart doorbells. EML-HTML-882</p><p>Please quote =
+CIF Hamburg.</p></body></html>

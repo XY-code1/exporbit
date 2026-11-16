@@ -1,0 +1,291 @@
+{
+  "meta": {
+    "note": "Synthetic POC-03 corpus; no real customer data.",
+    "generator": "backend/scripts/generate_poc03_corpus.py"
+  },
+  "files": {
+    "pdf_text_en_2p.pdf": {
+      "sha256": "5118c809fe8d46164819ffe03d0fbbe33b62e2593fdf41c8289d1604ad77bfaf",
+      "bytes": 1983
+    },
+    "pdf_text_cn_1p.pdf": {
+      "sha256": "2951bead4ed521cf5fd358f859ff39165a95f627c9363072bad0a9d451ddcf65",
+      "bytes": 2511
+    },
+    "pdf_scan_en_1p.pdf": {
+      "sha256": "9972cdd35fa3b8187c6616339679cb76af61e2e2ffd68231ad9cc4c7ce237ce4",
+      "bytes": 21003
+    },
+    "img_photo_en_exif90.jpg": {
+      "sha256": "951e940f1ce5e5f046bb1f5b6e9fd44271dfc4fd756bf335272c12e06dc6a5cc",
+      "bytes": 23098
+    },
+    "img_rot180_noexif.png": {
+      "sha256": "6c8557c37a3b3cb1303b7d6be36c1083472af340e67c44e9d2ad77c58957ff09",
+      "bytes": 17254
+    },
+    "eml_plain_with_pdf_attachment.eml": {
+      "sha256": "3a66c34a48cadb9b1a826b62c7145f25c7b4e8eb4403202c13e1d9970b8e603c",
+      "bytes": 3282
+    },
+    "eml_html_only.eml": {
+      "sha256": "ec7667b5b42bf60cd3830746faad529117367e2557478f46421558ebf3fd19f5",
+      "bytes": 287
+    },
+    "eml_with_exe_attachment.eml": {
+      "sha256": "dba8fc6027b86d3229aefc97ddb1dffea2892f7611b827d62ce19c0629ac367e",
+      "bytes": 626
+    },
+    "pdf_corrupted.pdf": {
+      "sha256": "c843ef85365f6ba67ec43ea9ab47b42dacf25362abb3ba22f081d07b4b0dd8c9",
+      "bytes": 1189
+    },
+    "pdf_encrypted.pdf": {
+      "sha256": "a655dc8abd2f29c54f832052760239a598835d51733cbf36e8fd69fc37fac881",
+      "bytes": 1893
+    },
+    "img_corrupted.jpg": {
+      "sha256": "eac768a42355bd11783d788d63b8cd14d9ef6908795f4bdedf6becdf60b06e0d",
+      "bytes": 79
+    },
+    "pdf_blank_scan.pdf": {
+      "sha256": "434d7611beef4ee0dc2fdbce2709b5b573c707560349a70e9988cadc00210a57",
+      "bytes": 6327
+    },
+    "file_unsupported.docx": {
+      "sha256": "21de449d70ee198651bd9ab77fd16ac5418befd435f9152ca5c6208c83261dbf",
+      "bytes": 30
+    }
+  },
+  "samples": [
+    {
+      "id": "PDF-TEXT-EN-2P",
+      "file": "pdf_text_en_2p.pdf",
+      "format": "pdf",
+      "expect": {
+        "outcome": "success",
+        "min_pages": 2,
+        "checks": [
+          {
+            "page": 1,
+            "contains": [
+              "QUANTITY 500 UNITS",
+              "FOB Shenzhen"
+            ]
+          },
+          {
+            "page": 2,
+            "contains": [
+              "PAGE-TWO-7Q4",
+              "end of June"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "PDF-TEXT-CN-1P",
+      "file": "pdf_text_cn_1p.pdf",
+      "format": "pdf",
+      "expect": {
+        "outcome": "success",
+        "min_pages": 1,
+        "checks": [
+          {
+            "page": 1,
+            "contains": [
+              "3000 条智能手环",
+              "CN-TOKEN-3000"
+            ],
+            "min_matches": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "PDF-SCAN-EN-1P",
+      "file": "pdf_scan_en_1p.pdf",
+      "format": "pdf",
+      "ocr_required": true,
+      "expect": {
+        "outcome": "success",
+        "min_pages": 1,
+        "checks": [
+          {
+            "page": 1,
+            "contains": [
+              "SCAN-TOKEN-9K2",
+              "quantity 800 units",
+              "end of June"
+            ],
+            "min_matches": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "IMG-EXIF90",
+      "file": "img_photo_en_exif90.jpg",
+      "format": "image",
+      "ocr_required": true,
+      "expect": {
+        "outcome": "success",
+        "min_pages": 1,
+        "checks": [
+          {
+            "page": 1,
+            "contains": [
+              "EXIF-OK-441",
+              "quantity 500 units",
+              "FOB Shenzhen"
+            ],
+            "min_matches": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "IMG-ROT180",
+      "file": "img_rot180_noexif.png",
+      "format": "image",
+      "ocr_required": true,
+      "expect": {
+        "outcome": "success",
+        "min_pages": 1,
+        "checks": [
+          {
+            "page": 1,
+            "contains": [
+              "ROT180-553",
+              "quantity 1200 units",
+              "CIF Hamburg"
+            ],
+            "min_matches": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "EML-PLAIN-PDF",
+      "file": "eml_plain_with_pdf_attachment.eml",
+      "format": "eml",
+      "expect": {
+        "outcome": "success",
+        "min_pages": 3,
+        "checks": [
+          {
+            "page": 1,
+            "contains": [
+              "EML-BODY-771"
+            ]
+          },
+          {
+            "page": 2,
+            "contains": [
+              "QUANTITY 500 UNITS"
+            ]
+          },
+          {
+            "page": 3,
+            "contains": [
+              "PAGE-TWO-7Q4"
+            ]
+          }
+        ],
+        "attachments": [
+          {
+            "filename": "quotation.pdf",
+            "parsed": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "EML-HTML-ONLY",
+      "file": "eml_html_only.eml",
+      "format": "eml",
+      "expect": {
+        "outcome": "success",
+        "min_pages": 1,
+        "checks": [
+          {
+            "page": 1,
+            "contains": [
+              "EML-HTML-882",
+              "2000 smart doorbells"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "EML-EXE-ATTACH",
+      "file": "eml_with_exe_attachment.eml",
+      "format": "eml",
+      "expect": {
+        "outcome": "success",
+        "min_pages": 1,
+        "checks": [
+          {
+            "page": 1,
+            "contains": [
+              "EML-EXE-990"
+            ]
+          }
+        ],
+        "attachments": [
+          {
+            "filename": "invoice.exe",
+            "parsed": false,
+            "skip_reason": "executable_blocked"
+          }
+        ]
+      }
+    },
+    {
+      "id": "PDF-CORRUPTED",
+      "file": "pdf_corrupted.pdf",
+      "format": "pdf",
+      "expect": {
+        "outcome": "error",
+        "code": "CORRUPTED"
+      }
+    },
+    {
+      "id": "PDF-ENCRYPTED",
+      "file": "pdf_encrypted.pdf",
+      "format": "pdf",
+      "expect": {
+        "outcome": "error",
+        "code": "ENCRYPTED"
+      }
+    },
+    {
+      "id": "IMG-CORRUPTED",
+      "file": "img_corrupted.jpg",
+      "format": "image",
+      "expect": {
+        "outcome": "error",
+        "code": "CORRUPTED"
+      }
+    },
+    {
+      "id": "PDF-BLANK-SCAN",
+      "file": "pdf_blank_scan.pdf",
+      "format": "pdf",
+      "expect": {
+        "outcome": "error",
+        "code": "EMPTY_TEXT"
+      }
+    },
+    {
+      "id": "UNSUPPORTED-DOCX",
+      "file": "file_unsupported.docx",
+      "format": "other",
+      "expect": {
+        "outcome": "error",
+        "code": "UNSUPPORTED_FORMAT"
+      }
+    }
+  ]
+}

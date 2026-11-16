@@ -1,0 +1,21 @@
+From: buyer@example.com
+To: sales@exporbit.example
+Subject: Inquiry with invoice
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============8231735972703738773=="
+
+--===============8231735972703738773==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Our purchase order is attached. EML-EXE-990 - 1200 units.
+
+--===============8231735972703738773==
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="invoice.exe"
+MIME-Version: 1.0
+
+TVqQAHN5bnRoZXRpYy1ub3QtYS1yZWFsLWJpbmFyeQ==
+
+--===============8231735972703738773==--

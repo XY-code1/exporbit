@@ -7,3 +7,13 @@ psycopg[binary]==3.2.3
 pytest==8.3.4
 httpx==0.28.1
 
+# Document parsing (POC-03). All local, license-checked for commercial use.
+pdfplumber==0.11.4
+pypdf==5.1.0
+pillow==11.1.0
+rapidocr==3.10.0
+onnxruntime==1.32.0
+
+# Test/corpus fixture generation only (synthetic PDFs); BSD-3.
+reportlab==4.2.5
+

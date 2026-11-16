@@ -1,0 +1,476 @@
+{
+  "meta": {
+    "poc": "POC-03",
+    "ran_at": "2026-11-16T06:25:52.384666+00:00",
+    "corpus": "backend/data/poc03_corpus/manifest.json"
+  },
+  "metrics": {
+    "success_total": 8,
+    "success_passed": 8,
+    "success_rate": 1.0,
+    "controlled_total": 5,
+    "controlled_passed": 5,
+    "controlled_rate": 1.0,
+    "page_checks_total": 11,
+    "page_checks_passed": 11,
+    "page_check_rate": 1.0,
+    "attachment_checks_total": 2,
+    "attachment_passed": 2,
+    "attachment_rate": 1.0,
+    "ocr_pages_total": 3,
+    "warnings_total": 2,
+    "versions": {
+      "pdfplumber": "0.11.4",
+      "pypdf": "5.1.0",
+      "Pillow": "11.1.0",
+      "rapidocr": "3.10.0",
+      "onnxruntime": "1.32.0"
+    },
+    "passed": true
+  },
+  "samples": [
+    {
+      "id": "PDF-TEXT-EN-2P",
+      "file": "pdf_text_en_2p.pdf",
+      "format": "pdf",
+      "expected": {
+        "outcome": "success",
+        "min_pages": 2,
+        "checks": [
+          {
+            "page": 1,
+            "contains": [
+              "QUANTITY 500 UNITS",
+              "FOB Shenzhen"
+            ]
+          },
+          {
+            "page": 2,
+            "contains": [
+              "PAGE-TWO-7Q4",
+              "end of June"
+            ]
+          }
+        ]
+      },
+      "elapsed_ms": 6,
+      "outcome": "success",
+      "pages": 2,
+      "sources": [
+        "text_layer",
+        "text_layer"
+      ],
+      "used_ocr": false,
+      "ocr_pages": 0,
+      "warnings": [],
+      "attachments": [],
+      "page_checks": [
+        {
+          "page": 1,
+          "passed": true
+        },
+        {
+          "page": 2,
+          "passed": true
+        }
+      ],
+      "failures": [],
+      "passed": true
+    },
+    {
+      "id": "PDF-TEXT-CN-1P",
+      "file": "pdf_text_cn_1p.pdf",
+      "format": "pdf",
+      "expected": {
+        "outcome": "success",
+        "min_pages": 1,
+        "checks": [
+          {
+            "page": 1,
+            "contains": [
+              "3000 条智能手环",
+              "CN-TOKEN-3000"
+            ],
+            "min_matches": 1
+          }
+        ]
+      },
+      "elapsed_ms": 24,
+      "outcome": "success",
+      "pages": 1,
+      "sources": [
+        "text_layer"
+      ],
+      "used_ocr": false,
+      "ocr_pages": 0,
+      "warnings": [],
+      "attachments": [],
+      "page_checks": [
+        {
+          "page": 1,
+          "passed": true
+        }
+      ],
+      "failures": [],
+      "passed": true
+    },
+    {
+      "id": "PDF-SCAN-EN-1P",
+      "file": "pdf_scan_en_1p.pdf",
+      "format": "pdf",
+      "expected": {
+        "outcome": "success",
+        "min_pages": 1,
+        "checks": [
+          {
+            "page": 1,
+            "contains": [
+              "SCAN-TOKEN-9K2",
+              "quantity 800 units",
+              "end of June"
+            ],
+            "min_matches": 2
+          }
+        ]
+      },
+      "elapsed_ms": 9652,
+      "outcome": "success",
+      "pages": 1,
+      "sources": [
+        "ocr"
+      ],
+      "used_ocr": true,
+      "ocr_pages": 1,
+      "warnings": [
+        "ocr_fallback_pages: 1"
+      ],
+      "attachments": [],
+      "page_checks": [
+        {
+          "page": 1,
+          "passed": true
+        }
+      ],
+      "failures": [],
+      "passed": true
+    },
+    {
+      "id": "IMG-EXIF90",
+      "file": "img_photo_en_exif90.jpg",
+      "format": "image",
+      "expected": {
+        "outcome": "success",
+        "min_pages": 1,
+        "checks": [
+          {
+            "page": 1,
+            "contains": [
+              "EXIF-OK-441",
+              "quantity 500 units",
+              "FOB Shenzhen"
+            ],
+            "min_matches": 2
+          }
+        ]
+      },
+      "elapsed_ms": 4512,
+      "outcome": "success",
+      "pages": 1,
+      "sources": [
+        "ocr"
+      ],
+      "used_ocr": true,
+      "ocr_pages": 1,
+      "warnings": [],
+      "attachments": [],
+      "page_checks": [
+        {
+          "page": 1,
+          "passed": true
+        }
+      ],
+      "failures": [],
+      "passed": true
+    },
+    {
+      "id": "IMG-ROT180",
+      "file": "img_rot180_noexif.png",
+      "format": "image",
+      "expected": {
+        "outcome": "success",
+        "min_pages": 1,
+        "checks": [
+          {
+            "page": 1,
+            "contains": [
+              "ROT180-553",
+              "quantity 1200 units",
+              "CIF Hamburg"
+            ],
+            "min_matches": 2
+          }
+        ]
+      },
+      "elapsed_ms": 4777,
+      "outcome": "success",
+      "pages": 1,
+      "sources": [
+        "ocr"
+      ],
+      "used_ocr": true,
+      "ocr_pages": 1,
+      "warnings": [],
+      "attachments": [],
+      "page_checks": [
+        {
+          "page": 1,
+          "passed": true
+        }
+      ],
+      "failures": [],
+      "passed": true
+    },
+    {
+      "id": "EML-PLAIN-PDF",
+      "file": "eml_plain_with_pdf_attachment.eml",
+      "format": "eml",
+      "expected": {
+        "outcome": "success",
+        "min_pages": 3,
+        "checks": [
+          {
+            "page": 1,
+            "contains": [
+              "EML-BODY-771"
+            ]
+          },
+          {
+            "page": 2,
+            "contains": [
+              "QUANTITY 500 UNITS"
+            ]
+          },
+          {
+            "page": 3,
+            "contains": [
+              "PAGE-TWO-7Q4"
+            ]
+          }
+        ],
+        "attachments": [
+          {
+            "filename": "quotation.pdf",
+            "parsed": true
+          }
+        ]
+      },
+      "elapsed_ms": 66,
+      "outcome": "success",
+      "pages": 3,
+      "sources": [
+        "email_body",
+        "attachment:quotation.pdf",
+        "attachment:quotation.pdf"
+      ],
+      "used_ocr": false,
+      "ocr_pages": 0,
+      "warnings": [],
+      "attachments": [
+        {
+          "filename": "quotation.pdf",
+          "size_bytes": 1983,
+          "parsed": true,
+          "skip_reason": null
+        }
+      ],
+      "page_checks": [
+        {
+          "page": 1,
+          "passed": true
+        },
+        {
+          "page": 2,
+          "passed": true
+        },
+        {
+          "page": 3,
+          "passed": true
+        }
+      ],
+      "attachment_check_passed": true,
+      "failures": [],
+      "passed": true
+    },
+    {
+      "id": "EML-HTML-ONLY",
+      "file": "eml_html_only.eml",
+      "format": "eml",
+      "expected": {
+        "outcome": "success",
+        "min_pages": 1,
+        "checks": [
+          {
+            "page": 1,
+            "contains": [
+              "EML-HTML-882",
+              "2000 smart doorbells"
+            ]
+          }
+        ]
+      },
+      "elapsed_ms": 1,
+      "outcome": "success",
+      "pages": 1,
+      "sources": [
+        "email_body"
+      ],
+      "used_ocr": false,
+      "ocr_pages": 0,
+      "warnings": [],
+      "attachments": [],
+      "page_checks": [
+        {
+          "page": 1,
+          "passed": true
+        }
+      ],
+      "failures": [],
+      "passed": true
+    },
+    {
+      "id": "EML-EXE-ATTACH",
+      "file": "eml_with_exe_attachment.eml",
+      "format": "eml",
+      "expected": {
+        "outcome": "success",
+        "min_pages": 1,
+        "checks": [
+          {
+            "page": 1,
+            "contains": [
+              "EML-EXE-990"
+            ]
+          }
+        ],
+        "attachments": [
+          {
+            "filename": "invoice.exe",
+            "parsed": false,
+            "skip_reason": "executable_blocked"
+          }
+        ]
+      },
+      "elapsed_ms": 14,
+      "outcome": "success",
+      "pages": 1,
+      "sources": [
+        "email_body"
+      ],
+      "used_ocr": false,
+      "ocr_pages": 0,
+      "warnings": [
+        "attachment invoice.exe: executable_blocked"
+      ],
+      "attachments": [
+        {
+          "filename": "invoice.exe",
+          "size_bytes": 31,
+          "parsed": false,
+          "skip_reason": "executable_blocked"
+        }
+      ],
+      "page_checks": [
+        {
+          "page": 1,
+          "passed": true
+        }
+      ],
+      "attachment_check_passed": true,
+      "failures": [],
+      "passed": true
+    },
+    {
+      "id": "PDF-CORRUPTED",
+      "file": "pdf_corrupted.pdf",
+      "format": "pdf",
+      "expected": {
+        "outcome": "error",
+        "code": "CORRUPTED"
+      },
+      "elapsed_ms": 0,
+      "outcome": "error",
+      "error_code": "CORRUPTED",
+      "error_details": {
+        "type": "PdfStreamError"
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "PDF-ENCRYPTED",
+      "file": "pdf_encrypted.pdf",
+      "format": "pdf",
+      "expected": {
+        "outcome": "error",
+        "code": "ENCRYPTED"
+      },
+      "elapsed_ms": 72,
+      "outcome": "error",
+      "error_code": "ENCRYPTED",
+      "error_details": {},
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "IMG-CORRUPTED",
+      "file": "img_corrupted.jpg",
+      "format": "image",
+      "expected": {
+        "outcome": "error",
+        "code": "CORRUPTED"
+      },
+      "elapsed_ms": 1244,
+      "outcome": "error",
+      "error_code": "CORRUPTED",
+      "error_details": {
+        "type": "UnidentifiedImageError"
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "PDF-BLANK-SCAN",
+      "file": "pdf_blank_scan.pdf",
+      "format": "pdf",
+      "expected": {
+        "outcome": "error",
+        "code": "EMPTY_TEXT"
+      },
+      "elapsed_ms": 4314,
+      "outcome": "error",
+      "error_code": "EMPTY_TEXT",
+      "error_details": {
+        "pages": 1
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "UNSUPPORTED-DOCX",
+      "file": "file_unsupported.docx",
+      "format": "other",
+      "expected": {
+        "outcome": "error",
+        "code": "UNSUPPORTED_FORMAT"
+      },
+      "elapsed_ms": 0,
+      "outcome": "error",
+      "error_code": "UNSUPPORTED_FORMAT",
+      "error_details": {
+        "extension": ".docx"
+      },
+      "passed": true,
+      "failures": []
+    }
+  ]
+}
