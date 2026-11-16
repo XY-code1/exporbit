@@ -335,7 +335,7 @@ def build_report(summary: dict, per_item: list[dict]) -> str:
     heading("边界与限制")
     lines.append("- 本 POC 仅验证 Provider 接口 + DeepSeek Adapter + 抽取 schema 的线上可用性，未接入 /inquiries 业务路径（按 POC-02 范围约定）。")
     lines.append("- 每轮调用均写入 `llm_runs` 表（purpose/model/token/延迟/输入哈希/错误码），原文不落库。")
-    lines.append("- 人工字段保护（CONFIRMED/INFERRED 不被 AI 重跑覆盖）由单元测试 `test_extraction_service.py` 验证，属纯函数行为演示，待 POC-03 接入业务路径后做端到端验证。")
+    lines.append("- 人工字段保护（CONFIRMED/INFERRED 不被 AI 重跑覆盖）由单元测试 `test_extraction_service.py` 验证，属纯函数行为演示，待接入业务路径后做端到端验证。")
     lines.append("- 语料为合成数据；真实询盘的领域分布、噪音与语言混杂会带来偏差。")
     lines.append("- 逐条明细见 `outputs/POC_02_RESULTS.json`。")
     lines.append("")

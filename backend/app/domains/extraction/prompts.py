@@ -31,6 +31,10 @@ evidence 规则：
 - 仅当 value 非空时填写：从原文摘取最直接支持该 value 的原文片段（verbatim 引文），不超过 40 字，不改写、不翻译。
 - 严禁编造原文中不存在的数值或事实；拿不准就输出 null + "INSUFFICIENT_DATA"。
 
+语言规则：
+- value 必须使用询盘原文的主要语言：原文为英文则 value 用英文，原文为中文则 value 用中文；不得翻译成其他语言，不得中英混写（原文本身使用的专有名词除外）。
+- evidence 必须与原文逐字一致，保持原文语言。
+
 EXAMPLE INPUT:
 "你好，我们想采购 500 副无线蓝牙耳机，需要印我们的 Logo，发到德国，请报 FOB 深圳价。"
 EXAMPLE JSON OUTPUT:
