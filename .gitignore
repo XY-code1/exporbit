@@ -33,6 +33,7 @@ uploaded_files/
 data/private/
 *.sqlite
 *.sqlite3
+backend/.poc_inquiry_id
 
 # Logs and temporary files
 *.log

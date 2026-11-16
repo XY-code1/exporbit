@@ -1,4 +1,4 @@
-# TradePilot Inquiry Workspace 低保真页面布局
+# Exporbit Inquiry Workspace 低保真页面布局
 
 > 阶段：桌面端低保真 UI 设计  
 > 目标：验证层级、任务流和信息密度，不定义视觉品牌或技术实现。
@@ -9,7 +9,7 @@
 
 ```text
 ┌──────────────────────────────────────────────────────────────────────────────┐
-│ TradePilot       当前询盘：Nordlicht GmbH / Smart Earbuds     [状态] [⋯] │
+│ Exporbit       当前询盘：Nordlicht GmbH / Smart Earbuds     [状态] [⋯] │
 ├──────────────┬──────────────────────────────────────┬────────────────────────┤
 │ 左：导航     │ 中：Inquiry Workspace               │ 右：Action Panel       │
 │ [+ 新建询盘] │ [原始询盘] [Snapshot] [匹配] ...   │ 下一步                │
@@ -134,4 +134,3 @@ OEM/ODM    MATCH             UNKNOWN
 3. Action Panel 是否帮助行动而非重复中间内容。
 4. 知乎不可用时是否仍有完整主路径。
 5. 回复入口是否只在上下文充分时成为主 CTA。
-

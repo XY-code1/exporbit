@@ -1,0 +1,2058 @@
+{
+  "summary": {
+    "corpus": {
+      "file": "backend/data/poc02_corpus.json",
+      "items": 24,
+      "languages": {
+        "CN": 12,
+        "EN": 12
+      }
+    },
+    "started_at": "2026-11-16T04:27:51.515293+00:00",
+    "finished_at": "2026-11-16T04:28:36.389659+00:00",
+    "model": "deepseek-chat",
+    "runs_persisted": true,
+    "persistence_failures": 0,
+    "schema": {
+      "valid_responses": 24,
+      "schema_pass_rate": 1.0,
+      "first_attempt_valid": 24,
+      "first_attempt_pass_rate": 1.0,
+      "repair_used": 0,
+      "repair_success_rate": null
+    },
+    "metrics": {
+      "per_field": {
+        "customer_need": {
+          "tp": 18,
+          "fp": 6,
+          "fn": 6,
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "presence_accuracy": 0.75
+        },
+        "quantity": {
+          "tp": 24,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "presence_accuracy": 1.0
+        },
+        "target_market": {
+          "tp": 20,
+          "fp": 4,
+          "fn": 4,
+          "precision": 0.8333,
+          "recall": 0.8333,
+          "f1": 0.8333,
+          "presence_accuracy": 0.8333
+        },
+        "customization_needs": {
+          "tp": 23,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.9583,
+          "recall": 0.9583,
+          "f1": 0.9583,
+          "presence_accuracy": 0.9583
+        },
+        "delivery_timeline": {
+          "tp": 21,
+          "fp": 3,
+          "fn": 3,
+          "precision": 0.875,
+          "recall": 0.875,
+          "f1": 0.875,
+          "presence_accuracy": 0.875
+        },
+        "price_terms": {
+          "tp": 21,
+          "fp": 3,
+          "fn": 2,
+          "precision": 0.875,
+          "recall": 0.913,
+          "f1": 0.8936,
+          "presence_accuracy": 0.875
+        }
+      },
+      "key_fields_macro_f1": 0.8854,
+      "all_fields_macro_f1": 0.885
+    },
+    "tokens": {
+      "prompt": 20216,
+      "completion": 4415,
+      "total": 24631
+    },
+    "latency_ms": {
+      "count": 24,
+      "avg": 1374,
+      "min": 981,
+      "max": 1769
+    },
+    "error_classification": {},
+    "verdict": {
+      "result": "PASS",
+      "criteria": {
+        "schema_pass_rate": {
+          "value": 1.0,
+          "target": 0.9,
+          "passed": true
+        },
+        "key_fields_macro_f1": {
+          "value": 0.8854,
+          "target": 0.85,
+          "passed": true
+        }
+      }
+    }
+  },
+  "items": [
+    {
+      "id": "CN-01",
+      "language": "CN",
+      "ok": true,
+      "repair_used": false,
+      "attempts": 1,
+      "error_code": null,
+      "latency_ms": 1662,
+      "prompt_tokens": 846,
+      "completion_tokens": 185,
+      "total_tokens": 1031,
+      "input_hash": "30274a625f98e2aee316d10ca507685ed0d1bb7385eb45a6ebe44a1a6afddb32",
+      "run_id": "850c3891-fcb7-4ed1-bb90-0476f237c3a8",
+      "extracted": {
+        "customer_need": "无线蓝牙耳机",
+        "quantity": "500 副",
+        "target_market": "德国",
+        "customization_needs": "印我们的 Logo",
+        "delivery_timeline": null,
+        "price_terms": "FOB 深圳"
+      },
+      "golden": {
+        "customer_need": "无线蓝牙耳机",
+        "quantity": "500 副",
+        "target_market": "德国",
+        "customization_needs": "印 Logo",
+        "delivery_timeline": null,
+        "price_terms": "FOB 深圳"
+      },
+      "scores": {
+        "customer_need": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "quantity": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "target_market": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "customization_needs": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "delivery_timeline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "price_terms": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "persisted": true
+    },
+    {
+      "id": "CN-02",
+      "language": "CN",
+      "ok": true,
+      "repair_used": false,
+      "attempts": 1,
+      "error_code": null,
+      "latency_ms": 1248,
+      "prompt_tokens": 838,
+      "completion_tokens": 174,
+      "total_tokens": 1012,
+      "input_hash": "b3d59aa136b704b5378d113ea9ef927b309f942ec01809645a4e07c0251c795d",
+      "run_id": "6ac5b3ba-ccb4-4582-a61c-78d6877b9b1d",
+      "extracted": {
+        "customer_need": "智能手表，支持心率监测和 GPS",
+        "quantity": null,
+        "target_market": "法国",
+        "customization_needs": null,
+        "delivery_timeline": null,
+        "price_terms": null
+      },
+      "golden": {
+        "customer_need": "智能手表",
+        "quantity": null,
+        "target_market": "法国",
+        "customization_needs": null,
+        "delivery_timeline": null,
+        "price_terms": null
+      },
+      "scores": {
+        "customer_need": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "quantity": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "target_market": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "customization_needs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "delivery_timeline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "price_terms": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "persisted": true
+    },
+    {
+      "id": "CN-03",
+      "language": "CN",
+      "ok": true,
+      "repair_used": false,
+      "attempts": 1,
+      "error_code": null,
+      "latency_ms": 1454,
+      "prompt_tokens": 833,
+      "completion_tokens": 171,
+      "total_tokens": 1004,
+      "input_hash": "8bf9dcf071ed4c19a227d18f9c7572c3d353f0e722fc3d6d23558fb7bd1aaaa6",
+      "run_id": "9a38a5c9-a4ab-4c8d-9daa-ccf50191fc35",
+      "extracted": {
+        "customer_need": "蓝牙音箱",
+        "quantity": "几千台",
+        "target_market": "东南亚",
+        "customization_needs": null,
+        "delivery_timeline": null,
+        "price_terms": null
+      },
+      "golden": {
+        "customer_need": "蓝牙音箱",
+        "quantity": "几千台",
+        "target_market": "东南亚",
+        "customization_needs": null,
+        "delivery_timeline": null,
+        "price_terms": null
+      },
+      "scores": {
+        "customer_need": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "quantity": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "target_market": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "customization_needs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "delivery_timeline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "price_terms": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "persisted": true
+    },
+    {
+      "id": "CN-04",
+      "language": "CN",
+      "ok": true,
+      "repair_used": false,
+      "attempts": 1,
+      "error_code": null,
+      "latency_ms": 1354,
+      "prompt_tokens": 848,
+      "completion_tokens": 187,
+      "total_tokens": 1035,
+      "input_hash": "34cf4526dc383f48bb4b78b3895797261ad9d62d1a854337adf981307dbc3740",
+      "run_id": "decb5f08-da86-4173-8702-818c48504fc3",
+      "extracted": {
+        "customer_need": "智能摄像头",
+        "quantity": "1000 台",
+        "target_market": null,
+        "customization_needs": "CE 认证",
+        "delivery_timeline": "6 月底前",
+        "price_terms": "FOB 宁波"
+      },
+      "golden": {
+        "customer_need": "智能摄像头",
+        "quantity": "1000 台",
+        "target_market": null,
+        "customization_needs": "CE 认证",
+        "delivery_timeline": "6 月底前",
+        "price_terms": "FOB 宁波"
+      },
+      "scores": {
+        "customer_need": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "quantity": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "target_market": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "customization_needs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "delivery_timeline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "price_terms": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "persisted": true
+    },
+    {
+      "id": "CN-05",
+      "language": "CN",
+      "ok": true,
+      "repair_used": false,
+      "attempts": 1,
+      "error_code": null,
+      "latency_ms": 1545,
+      "prompt_tokens": 847,
+      "completion_tokens": 196,
+      "total_tokens": 1043,
+      "input_hash": "0905fb8dc587ba44cb035189a9ab656fe0d867c69fcea1178f4156498c2d68e7",
+      "run_id": "a9a94aba-5872-424d-9aec-c9df71b701d4",
+      "extracted": {
+        "customer_need": "智能门铃",
+        "quantity": "2000 个",
+        "target_market": "美国",
+        "customization_needs": "定制彩盒",
+        "delivery_timeline": null,
+        "price_terms": "目标价 15 美元以内"
+      },
+      "golden": {
+        "customer_need": "智能门铃",
+        "quantity": "2000 个",
+        "target_market": "美国",
+        "customization_needs": "定制彩盒",
+        "delivery_timeline": null,
+        "price_terms": "15 美元以内"
+      },
+      "scores": {
+        "customer_need": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "quantity": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "target_market": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "customization_needs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "delivery_timeline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "price_terms": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "persisted": true
+    },
+    {
+      "id": "CN-06",
+      "language": "CN",
+      "ok": true,
+      "repair_used": false,
+      "attempts": 1,
+      "error_code": null,
+      "latency_ms": 1525,
+      "prompt_tokens": 832,
+      "completion_tokens": 167,
+      "total_tokens": 999,
+      "input_hash": "c27ce9573b3c6ef99879c22ba6c20df86c57211e22224beac2f05658e433e489",
+      "run_id": "6d1027bc-fe7b-4103-9db2-89b04546542b",
+      "extracted": {
+        "customer_need": "便携式咖啡机",
+        "quantity": null,
+        "target_market": null,
+        "customization_needs": null,
+        "delivery_timeline": null,
+        "price_terms": null
+      },
+      "golden": {
+        "customer_need": "便携式咖啡机",
+        "quantity": null,
+        "target_market": null,
+        "customization_needs": null,
+        "delivery_timeline": null,
+        "price_terms": null
+      },
+      "scores": {
+        "customer_need": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "quantity": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "target_market": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "customization_needs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "delivery_timeline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "price_terms": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "persisted": true
+    },
+    {
+      "id": "CN-07",
+      "language": "CN",
+      "ok": true,
+      "repair_used": false,
+      "attempts": 1,
+      "error_code": null,
+      "latency_ms": 1377,
+      "prompt_tokens": 844,
+      "completion_tokens": 189,
+      "total_tokens": 1033,
+      "input_hash": "137963712148390b78a318dd930867d8656a898662bd5a1e0b669f88aa92d5fa",
+      "run_id": "f62403d7-dfa2-43be-811c-e07a3f6c21b8",
+      "extracted": {
+        "customer_need": "智能手环",
+        "quantity": "3000 条",
+        "target_market": "德国和波兰",
+        "customization_needs": null,
+        "delivery_timeline": "5 月前",
+        "price_terms": null
+      },
+      "golden": {
+        "customer_need": "智能手环",
+        "quantity": "3000 条",
+        "target_market": "德国和波兰",
+        "customization_needs": null,
+        "delivery_timeline": "5 月前",
+        "price_terms": null
+      },
+      "scores": {
+        "customer_need": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "quantity": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "target_market": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "customization_needs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "delivery_timeline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "price_terms": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "persisted": true
+    },
+    {
+      "id": "CN-08",
+      "language": "CN",
+      "ok": true,
+      "repair_used": false,
+      "attempts": 1,
+      "error_code": null,
+      "latency_ms": 1341,
+      "prompt_tokens": 846,
+      "completion_tokens": 191,
+      "total_tokens": 1037,
+      "input_hash": "e739bfb9c484d8051f13b3dd0d09aaf8896afb9c35742d25c2aed89e0239d1b7",
+      "run_id": "fa06ae05-d18b-4626-b2bd-50020bc4bb79",
+      "extracted": {
+        "customer_need": "儿童平板电脑",
+        "quantity": "800 台",
+        "target_market": "德国",
+        "customization_needs": "预装教育软件和定制开机画面",
+        "delivery_timeline": null,
+        "price_terms": "CIF 汉堡"
+      },
+      "golden": {
+        "customer_need": "儿童平板电脑",
+        "quantity": "800 台",
+        "target_market": "德国",
+        "customization_needs": "预装教育软件和定制开机画面",
+        "delivery_timeline": null,
+        "price_terms": "CIF 汉堡"
+      },
+      "scores": {
+        "customer_need": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "quantity": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "target_market": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "customization_needs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "delivery_timeline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "price_terms": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "persisted": true
+    },
+    {
+      "id": "CN-09",
+      "language": "CN",
+      "ok": true,
+      "repair_used": false,
+      "attempts": 1,
+      "error_code": null,
+      "latency_ms": 1504,
+      "prompt_tokens": 836,
+      "completion_tokens": 170,
+      "total_tokens": 1006,
+      "input_hash": "b8660f39b83f0bd1564e41ea3dbe7a60677265b893fd244d6b935009c9d504d6",
+      "run_id": "fafed449-3a5b-4c4f-a643-b365279fdffa",
+      "extracted": {
+        "customer_need": "智能水杯",
+        "quantity": null,
+        "target_market": "日本",
+        "customization_needs": null,
+        "delivery_timeline": null,
+        "price_terms": null
+      },
+      "golden": {
+        "customer_need": "智能水杯",
+        "quantity": null,
+        "target_market": "日本",
+        "customization_needs": null,
+        "delivery_timeline": null,
+        "price_terms": null
+      },
+      "scores": {
+        "customer_need": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "quantity": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "target_market": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "customization_needs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "delivery_timeline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "price_terms": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "persisted": true
+    },
+    {
+      "id": "CN-10",
+      "language": "CN",
+      "ok": true,
+      "repair_used": false,
+      "attempts": 1,
+      "error_code": null,
+      "latency_ms": 1530,
+      "prompt_tokens": 847,
+      "completion_tokens": 199,
+      "total_tokens": 1046,
+      "input_hash": "dab73c73b4ad0d6f9c29dfe421ffa3e1b62b9c380c1a6aff2e82914bf85f4430",
+      "run_id": "8975d556-53a7-45f2-9c53-e8dabaab40f0",
+      "extracted": {
+        "customer_need": "智能灯带",
+        "quantity": "1500 套",
+        "target_market": null,
+        "customization_needs": "CE 和 RoHS 证书",
+        "delivery_timeline": "4 月底交货",
+        "price_terms": "EXW 广州"
+      },
+      "golden": {
+        "customer_need": "智能灯带",
+        "quantity": "1500 套",
+        "target_market": null,
+        "customization_needs": "CE 和 RoHS 证书",
+        "delivery_timeline": "4 月底",
+        "price_terms": "EXW 广州"
+      },
+      "scores": {
+        "customer_need": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "quantity": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "target_market": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "customization_needs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "delivery_timeline": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "price_terms": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "persisted": true
+    },
+    {
+      "id": "CN-11",
+      "language": "CN",
+      "ok": true,
+      "repair_used": false,
+      "attempts": 1,
+      "error_code": null,
+      "latency_ms": 1072,
+      "prompt_tokens": 857,
+      "completion_tokens": 207,
+      "total_tokens": 1064,
+      "input_hash": "4e897fd6a0d9fa605c7aaf5ec720181dd6e4b85ad6b46519c0d1df79b71b2bd2",
+      "run_id": "394fbef9-e587-46b6-b844-5cfe850b26ef",
+      "extracted": {
+        "customer_need": "10.1 英寸安卓平板，4GB+64GB，支持蓝牙 5.3",
+        "quantity": "600 台",
+        "target_market": "巴西",
+        "customization_needs": null,
+        "delivery_timeline": null,
+        "price_terms": "DDP"
+      },
+      "golden": {
+        "customer_need": "10.1 英寸安卓平板",
+        "quantity": "600 台",
+        "target_market": "巴西",
+        "customization_needs": null,
+        "delivery_timeline": null,
+        "price_terms": "DDP"
+      },
+      "scores": {
+        "customer_need": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "quantity": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "target_market": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "customization_needs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "delivery_timeline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "price_terms": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "persisted": true
+    },
+    {
+      "id": "CN-12",
+      "language": "CN",
+      "ok": true,
+      "repair_used": false,
+      "attempts": 1,
+      "error_code": null,
+      "latency_ms": 1570,
+      "prompt_tokens": 840,
+      "completion_tokens": 170,
+      "total_tokens": 1010,
+      "input_hash": "d0dfabea6e2efbd5f473765203d8e1ae6b7c6f4da4081e39981b02f0803744fa",
+      "run_id": "7b8f5274-08fd-4e85-931f-ca12b9a7edc3",
+      "extracted": {
+        "customer_need": "翻译耳机",
+        "quantity": null,
+        "target_market": "中东市场",
+        "customization_needs": null,
+        "delivery_timeline": "越快越好",
+        "price_terms": null
+      },
+      "golden": {
+        "customer_need": "翻译耳机",
+        "quantity": null,
+        "target_market": "中东",
+        "customization_needs": null,
+        "delivery_timeline": "越快越好",
+        "price_terms": null
+      },
+      "scores": {
+        "customer_need": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "quantity": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "target_market": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "customization_needs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "delivery_timeline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "price_terms": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "persisted": true
+    },
+    {
+      "id": "EN-01",
+      "language": "EN",
+      "ok": true,
+      "repair_used": false,
+      "attempts": 1,
+      "error_code": null,
+      "latency_ms": 1135,
+      "prompt_tokens": 849,
+      "completion_tokens": 190,
+      "total_tokens": 1039,
+      "input_hash": "4725f71185dacb72d86f46d0fc5645d4e3132a05326098db3a1fab16c5c8cd1e",
+      "run_id": "ced50f47-3c5d-4702-888c-7bca88bf47c5",
+      "extracted": {
+        "customer_need": "wireless earbuds",
+        "quantity": "2,000 units",
+        "target_market": "UK",
+        "customization_needs": "logo printed",
+        "delivery_timeline": null,
+        "price_terms": "FOB Shenzhen"
+      },
+      "golden": {
+        "customer_need": "wireless earbuds",
+        "quantity": "2,000 units",
+        "target_market": "UK",
+        "customization_needs": "logo printed",
+        "delivery_timeline": null,
+        "price_terms": "FOB Shenzhen"
+      },
+      "scores": {
+        "customer_need": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "quantity": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "target_market": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "customization_needs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "delivery_timeline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "price_terms": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "persisted": true
+    },
+    {
+      "id": "EN-02",
+      "language": "EN",
+      "ok": true,
+      "repair_used": false,
+      "attempts": 1,
+      "error_code": null,
+      "latency_ms": 1564,
+      "prompt_tokens": 839,
+      "completion_tokens": 174,
+      "total_tokens": 1013,
+      "input_hash": "3e6cb57a7f5decbf7dc27e863fc557aeaf556022fa17cc87132859193ff29e81",
+      "run_id": "644f9ae0-b4a9-4af8-aeeb-420cb7cc28b3",
+      "extracted": {
+        "customer_need": "smart watches with heart rate monitoring",
+        "quantity": null,
+        "target_market": "French market",
+        "customization_needs": null,
+        "delivery_timeline": null,
+        "price_terms": null
+      },
+      "golden": {
+        "customer_need": "smart watches",
+        "quantity": null,
+        "target_market": "France",
+        "customization_needs": null,
+        "delivery_timeline": null,
+        "price_terms": null
+      },
+      "scores": {
+        "customer_need": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "quantity": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "target_market": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "customization_needs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "delivery_timeline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "price_terms": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "persisted": true
+    },
+    {
+      "id": "EN-03",
+      "language": "EN",
+      "ok": true,
+      "repair_used": false,
+      "attempts": 1,
+      "error_code": null,
+      "latency_ms": 1488,
+      "prompt_tokens": 835,
+      "completion_tokens": 175,
+      "total_tokens": 1010,
+      "input_hash": "5daf6e3d20d6eb50c12f5460c6d27e5f125c42fef2eeda10ba07d02a983c4c8a",
+      "run_id": "fe100551-eb7d-4cb2-953b-371a3a899854",
+      "extracted": {
+        "customer_need": "Bluetooth speakers",
+        "quantity": "several thousand pieces",
+        "target_market": "Southeast Asia",
+        "customization_needs": null,
+        "delivery_timeline": null,
+        "price_terms": null
+      },
+      "golden": {
+        "customer_need": "Bluetooth speakers",
+        "quantity": "several thousand pieces",
+        "target_market": "Southeast Asia",
+        "customization_needs": null,
+        "delivery_timeline": null,
+        "price_terms": null
+      },
+      "scores": {
+        "customer_need": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "quantity": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "target_market": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "customization_needs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "delivery_timeline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "price_terms": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "persisted": true
+    },
+    {
+      "id": "EN-04",
+      "language": "EN",
+      "ok": true,
+      "repair_used": false,
+      "attempts": 1,
+      "error_code": null,
+      "latency_ms": 1431,
+      "prompt_tokens": 842,
+      "completion_tokens": 187,
+      "total_tokens": 1029,
+      "input_hash": "5aa8dbfaa5ad207818088205646da2c6ad11b67cdf8be61576cb874151cefa93",
+      "run_id": "66d58661-5223-4051-99e2-d415532eae38",
+      "extracted": {
+        "customer_need": "smart security cameras",
+        "quantity": "1,000",
+        "target_market": null,
+        "customization_needs": "CE certified",
+        "delivery_timeline": "by end of June",
+        "price_terms": "FOB Ningbo"
+      },
+      "golden": {
+        "customer_need": "smart security cameras",
+        "quantity": "1,000",
+        "target_market": null,
+        "customization_needs": "CE certified",
+        "delivery_timeline": "end of June",
+        "price_terms": "FOB Ningbo"
+      },
+      "scores": {
+        "customer_need": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "quantity": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "target_market": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "customization_needs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "delivery_timeline": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "price_terms": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "persisted": true
+    },
+    {
+      "id": "EN-05",
+      "language": "EN",
+      "ok": true,
+      "repair_used": false,
+      "attempts": 1,
+      "error_code": null,
+      "latency_ms": 1262,
+      "prompt_tokens": 849,
+      "completion_tokens": 196,
+      "total_tokens": 1045,
+      "input_hash": "b98f216057414772234ef825ed1eb218cef7efb02b3d4b0a8ea1c884a2882aba",
+      "run_id": "f981339f-31ec-44f2-be76-a2473f4318b6",
+      "extracted": {
+        "customer_need": "video doorbells",
+        "quantity": "2,000",
+        "target_market": "US",
+        "customization_needs": "Custom color box packaging",
+        "delivery_timeline": null,
+        "price_terms": "target price under 15 USD"
+      },
+      "golden": {
+        "customer_need": "video doorbells",
+        "quantity": "2,000",
+        "target_market": "US",
+        "customization_needs": "custom color box packaging",
+        "delivery_timeline": null,
+        "price_terms": "under 15 USD"
+      },
+      "scores": {
+        "customer_need": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "quantity": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "target_market": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "customization_needs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "delivery_timeline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "price_terms": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "persisted": true
+    },
+    {
+      "id": "EN-06",
+      "language": "EN",
+      "ok": true,
+      "repair_used": false,
+      "attempts": 1,
+      "error_code": null,
+      "latency_ms": 1352,
+      "prompt_tokens": 829,
+      "completion_tokens": 175,
+      "total_tokens": 1004,
+      "input_hash": "b0fddf37ba74b000e57546a93c8c73791d06807bcf21369ca7df53c8473eb679",
+      "run_id": "3370af8f-38b2-487f-817b-e9d493562b25",
+      "extracted": {
+        "customer_need": "便携式咖啡机，索取产品目录",
+        "quantity": null,
+        "target_market": null,
+        "customization_needs": null,
+        "delivery_timeline": null,
+        "price_terms": null
+      },
+      "golden": {
+        "customer_need": "portable coffee machines",
+        "quantity": null,
+        "target_market": null,
+        "customization_needs": null,
+        "delivery_timeline": null,
+        "price_terms": null
+      },
+      "scores": {
+        "customer_need": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "quantity": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "target_market": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "customization_needs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "delivery_timeline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "price_terms": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "persisted": true
+    },
+    {
+      "id": "EN-07",
+      "language": "EN",
+      "ok": true,
+      "repair_used": false,
+      "attempts": 1,
+      "error_code": null,
+      "latency_ms": 1194,
+      "prompt_tokens": 838,
+      "completion_tokens": 185,
+      "total_tokens": 1023,
+      "input_hash": "fe903c7c031605328a218600d54cdda9063c59f2e422fad60262e4dfc11e9106",
+      "run_id": "40b5c32e-7453-4910-a5ad-444404fedb4c",
+      "extracted": {
+        "customer_need": "smart wristbands",
+        "quantity": "3,000",
+        "target_market": "German and Polish markets",
+        "customization_needs": null,
+        "delivery_timeline": "before May",
+        "price_terms": null
+      },
+      "golden": {
+        "customer_need": "smart wristbands",
+        "quantity": "3,000",
+        "target_market": "Germany and Poland",
+        "customization_needs": null,
+        "delivery_timeline": "before May",
+        "price_terms": null
+      },
+      "scores": {
+        "customer_need": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "quantity": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "target_market": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "customization_needs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "delivery_timeline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "price_terms": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "persisted": true
+    },
+    {
+      "id": "EN-08",
+      "language": "EN",
+      "ok": true,
+      "repair_used": false,
+      "attempts": 1,
+      "error_code": null,
+      "latency_ms": 1293,
+      "prompt_tokens": 841,
+      "completion_tokens": 183,
+      "total_tokens": 1024,
+      "input_hash": "3dbf38e7a7ef261f01bc75b3fde700d8a1fd33be1a4f4bb8f0862e0109442d0c",
+      "run_id": "b385d337-1169-41f0-87a8-16dad696aae5",
+      "extracted": {
+        "customer_need": "kids tablets",
+        "quantity": "800",
+        "target_market": "Germany",
+        "customization_needs": "educational software pre-installed and custom boot screen",
+        "delivery_timeline": null,
+        "price_terms": "CIF Hamburg"
+      },
+      "golden": {
+        "customer_need": "kids tablets",
+        "quantity": "800",
+        "target_market": "Germany",
+        "customization_needs": "educational software pre-installed and custom boot screen",
+        "delivery_timeline": null,
+        "price_terms": "CIF Hamburg"
+      },
+      "scores": {
+        "customer_need": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "quantity": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "target_market": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "customization_needs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "delivery_timeline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "price_terms": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "persisted": true
+    },
+    {
+      "id": "EN-09",
+      "language": "EN",
+      "ok": true,
+      "repair_used": false,
+      "attempts": 1,
+      "error_code": null,
+      "latency_ms": 981,
+      "prompt_tokens": 837,
+      "completion_tokens": 162,
+      "total_tokens": 999,
+      "input_hash": "29b373937ab0b01936f8c0eeed8a7c801f615878b4fceb2930017cb878006081",
+      "run_id": "8c0e66ac-416c-477e-9c55-1f64743fd106",
+      "extracted": {
+        "customer_need": "智能水瓶",
+        "quantity": null,
+        "target_market": "日本",
+        "customization_needs": null,
+        "delivery_timeline": null,
+        "price_terms": null
+      },
+      "golden": {
+        "customer_need": "smart water bottles",
+        "quantity": null,
+        "target_market": "Japan",
+        "customization_needs": null,
+        "delivery_timeline": null,
+        "price_terms": null
+      },
+      "scores": {
+        "customer_need": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "quantity": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "target_market": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "customization_needs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "delivery_timeline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "price_terms": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "persisted": true
+    },
+    {
+      "id": "EN-10",
+      "language": "EN",
+      "ok": true,
+      "repair_used": false,
+      "attempts": 1,
+      "error_code": null,
+      "latency_ms": 1094,
+      "prompt_tokens": 844,
+      "completion_tokens": 191,
+      "total_tokens": 1035,
+      "input_hash": "4b9987e80a94542edf3df8220a418d3c0dfc793ca56adc36c2fe7c62adc72465",
+      "run_id": "1650e7ed-90a6-4c48-8422-780cb320ad0a",
+      "extracted": {
+        "customer_need": "smart LED strip kits",
+        "quantity": "1,500",
+        "target_market": null,
+        "customization_needs": "CE and RoHS certificates",
+        "delivery_timeline": "by end of April",
+        "price_terms": "EXW Guangzhou"
+      },
+      "golden": {
+        "customer_need": "smart LED strip kits",
+        "quantity": "1,500",
+        "target_market": null,
+        "customization_needs": "CE and RoHS certificates",
+        "delivery_timeline": "end of April",
+        "price_terms": "EXW Guangzhou"
+      },
+      "scores": {
+        "customer_need": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "quantity": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "target_market": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "customization_needs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "delivery_timeline": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "price_terms": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "persisted": true
+    },
+    {
+      "id": "EN-11",
+      "language": "EN",
+      "ok": true,
+      "repair_used": false,
+      "attempts": 1,
+      "error_code": null,
+      "latency_ms": 1769,
+      "prompt_tokens": 853,
+      "completion_tokens": 206,
+      "total_tokens": 1059,
+      "input_hash": "0e4de6eebbdf22a85f15d99698ba6533adbb71e46e0360ea3aa98ac96667574a",
+      "run_id": "db5b9a31-e090-4499-8ee6-38e4533229cd",
+      "extracted": {
+        "customer_need": "10.1-inch Android tablets, 4GB+64GB, Bluetooth 5.3",
+        "quantity": "600 units",
+        "target_market": "Brazil",
+        "customization_needs": null,
+        "delivery_timeline": null,
+        "price_terms": "DDP"
+      },
+      "golden": {
+        "customer_need": "10.1-inch Android tablets",
+        "quantity": "600 units",
+        "target_market": "Brazil",
+        "customization_needs": null,
+        "delivery_timeline": null,
+        "price_terms": "DDP"
+      },
+      "scores": {
+        "customer_need": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "quantity": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "target_market": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "customization_needs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "delivery_timeline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "price_terms": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "persisted": true
+    },
+    {
+      "id": "EN-12",
+      "language": "EN",
+      "ok": true,
+      "repair_used": false,
+      "attempts": 1,
+      "error_code": null,
+      "latency_ms": 1221,
+      "prompt_tokens": 846,
+      "completion_tokens": 185,
+      "total_tokens": 1031,
+      "input_hash": "8276dadb23679c87324259f834daa8fb9a844434fa540d2f54a7f5f5f5f0402e",
+      "run_id": "7b85bd6e-0360-4794-90d0-be77b82ecf72",
+      "extracted": {
+        "customer_need": "translator earbuds",
+        "quantity": null,
+        "target_market": "Middle East",
+        "customization_needs": null,
+        "delivery_timeline": "as soon as possible",
+        "price_terms": "bulk pricing"
+      },
+      "golden": {
+        "customer_need": "translator earbuds",
+        "quantity": null,
+        "target_market": "Middle East",
+        "customization_needs": null,
+        "delivery_timeline": "as soon as possible",
+        "price_terms": null
+      },
+      "scores": {
+        "customer_need": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "quantity": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "target_market": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "customization_needs": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "delivery_timeline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "price_terms": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "persisted": true
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-# TradePilot Inquiry Workspace 验收标准
+# Exporbit Inquiry Workspace 验收标准
 
 > 状态：评审稿｜2026-11-14  
 > 用途：产品评审与后续 UI/研发验收输入；不包含技术方案。
@@ -118,4 +118,3 @@
 4. 回复版本命名及生成期间并发编辑策略。
 
 未经验证的文件限制不得出现在 UI 文案中。
-
