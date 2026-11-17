@@ -7,6 +7,8 @@ from app.core.config import settings
 from app.infrastructure.database import Base
 from app.domains.inquiry.models import Customer, Inquiry  # noqa: F401
 from app.domains.llm_run.models import LLMRun  # noqa: F401
+from app.domains.evidence.models import Evidence, Insight, InsightEvidence, SourceProvider  # noqa: F401
+from app.domains.extraction.models import InquiryExtractionRecord  # noqa: F401
 
 config = context.config
 config.set_main_option("sqlalchemy.url", settings.database_url)

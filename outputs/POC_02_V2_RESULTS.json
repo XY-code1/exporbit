@@ -1,0 +1,868 @@
+{
+  "started_at": "2026-11-17T07:28:26.632942+00:00",
+  "finished_at": "2026-11-17T07:29:48.384255+00:00",
+  "dataset": "backend/data/poc02_v2_corpus.json",
+  "cases": 30,
+  "schema_success_rate": 1.0,
+  "field_accuracy": {
+    "product_type": {
+      "correct": 28,
+      "total": 30,
+      "accuracy": 0.9333333333333333
+    },
+    "target_market": {
+      "correct": 27,
+      "total": 30,
+      "accuracy": 0.9
+    },
+    "expected_delivery": {
+      "correct": 28,
+      "total": 30,
+      "accuracy": 0.9333333333333333
+    }
+  },
+  "rows": [
+    {
+      "id": "CN-01",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "无线蓝牙耳机"
+          ],
+          "expected": [
+            "无线蓝牙耳机"
+          ],
+          "match": true
+        },
+        "target_market": {
+          "actual": "德国",
+          "expected": "德国",
+          "match": true
+        },
+        "expected_delivery": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 3170
+    },
+    {
+      "id": "CN-02",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "智能手表"
+          ],
+          "expected": [
+            "智能手表"
+          ],
+          "match": true
+        },
+        "target_market": {
+          "actual": "法国",
+          "expected": "法国",
+          "match": true
+        },
+        "expected_delivery": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 2580
+    },
+    {
+      "id": "CN-03",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "蓝牙音箱"
+          ],
+          "expected": [
+            "蓝牙音箱"
+          ],
+          "match": true
+        },
+        "target_market": {
+          "actual": "东南亚",
+          "expected": "东南亚",
+          "match": true
+        },
+        "expected_delivery": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 2684
+    },
+    {
+      "id": "CN-04",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "智能摄像头"
+          ],
+          "expected": [
+            "智能摄像头"
+          ],
+          "match": true
+        },
+        "target_market": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        },
+        "expected_delivery": {
+          "actual": "6 月底前",
+          "expected": "6 月底前",
+          "match": true
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 3276
+    },
+    {
+      "id": "CN-05",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "智能门铃"
+          ],
+          "expected": [
+            "智能门铃"
+          ],
+          "match": true
+        },
+        "target_market": {
+          "actual": "美国",
+          "expected": "美国",
+          "match": true
+        },
+        "expected_delivery": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 2257
+    },
+    {
+      "id": "CN-06",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "便携式咖啡机"
+          ],
+          "expected": [
+            "便携式咖啡机"
+          ],
+          "match": true
+        },
+        "target_market": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        },
+        "expected_delivery": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 2948
+    },
+    {
+      "id": "CN-07",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "智能手环"
+          ],
+          "expected": [
+            "智能手环"
+          ],
+          "match": true
+        },
+        "target_market": {
+          "actual": "德国和波兰",
+          "expected": "德国和波兰",
+          "match": true
+        },
+        "expected_delivery": {
+          "actual": "5 月前",
+          "expected": "5 月前",
+          "match": true
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 2489
+    },
+    {
+      "id": "CN-08",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "儿童平板电脑"
+          ],
+          "expected": [
+            "儿童平板电脑"
+          ],
+          "match": true
+        },
+        "target_market": {
+          "actual": "德国",
+          "expected": "德国",
+          "match": true
+        },
+        "expected_delivery": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 2231
+    },
+    {
+      "id": "CN-09",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "智能水杯"
+          ],
+          "expected": [
+            "智能水杯"
+          ],
+          "match": true
+        },
+        "target_market": {
+          "actual": "日本",
+          "expected": "日本",
+          "match": true
+        },
+        "expected_delivery": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 3358
+    },
+    {
+      "id": "CN-10",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "智能灯带"
+          ],
+          "expected": [
+            "智能灯带"
+          ],
+          "match": true
+        },
+        "target_market": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        },
+        "expected_delivery": {
+          "actual": "4 月底交货",
+          "expected": "4 月底",
+          "match": false
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 2713
+    },
+    {
+      "id": "CN-11",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "安卓平板"
+          ],
+          "expected": [
+            "10.1 英寸安卓平板"
+          ],
+          "match": false
+        },
+        "target_market": {
+          "actual": "巴西",
+          "expected": "巴西",
+          "match": true
+        },
+        "expected_delivery": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 2761
+    },
+    {
+      "id": "CN-12",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "翻译耳机"
+          ],
+          "expected": [
+            "翻译耳机"
+          ],
+          "match": true
+        },
+        "target_market": {
+          "actual": "中东市场",
+          "expected": "中东",
+          "match": false
+        },
+        "expected_delivery": {
+          "actual": "越快越好",
+          "expected": "越快越好",
+          "match": true
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 2718
+    },
+    {
+      "id": "EN-01",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "wireless earbuds"
+          ],
+          "expected": [
+            "wireless earbuds"
+          ],
+          "match": true
+        },
+        "target_market": {
+          "actual": "uk",
+          "expected": "uk",
+          "match": true
+        },
+        "expected_delivery": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 3936
+    },
+    {
+      "id": "EN-02",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "smart watches"
+          ],
+          "expected": [
+            "smart watches"
+          ],
+          "match": true
+        },
+        "target_market": {
+          "actual": "french market",
+          "expected": "france",
+          "match": false
+        },
+        "expected_delivery": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 2553
+    },
+    {
+      "id": "EN-03",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "bluetooth speakers"
+          ],
+          "expected": [
+            "bluetooth speakers"
+          ],
+          "match": true
+        },
+        "target_market": {
+          "actual": "southeast asia",
+          "expected": "southeast asia",
+          "match": true
+        },
+        "expected_delivery": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 2526
+    },
+    {
+      "id": "EN-04",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "smart security cameras"
+          ],
+          "expected": [
+            "smart security cameras"
+          ],
+          "match": true
+        },
+        "target_market": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        },
+        "expected_delivery": {
+          "actual": "end of june",
+          "expected": "end of june",
+          "match": true
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 2930
+    },
+    {
+      "id": "EN-05",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "video doorbells"
+          ],
+          "expected": [
+            "video doorbells"
+          ],
+          "match": true
+        },
+        "target_market": {
+          "actual": "us",
+          "expected": "us",
+          "match": true
+        },
+        "expected_delivery": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 2355
+    },
+    {
+      "id": "EN-06",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "portable coffee machines"
+          ],
+          "expected": [
+            "portable coffee machines"
+          ],
+          "match": true
+        },
+        "target_market": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        },
+        "expected_delivery": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 2646
+    },
+    {
+      "id": "EN-07",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "smart wristbands"
+          ],
+          "expected": [
+            "smart wristbands"
+          ],
+          "match": true
+        },
+        "target_market": {
+          "actual": "german and polish markets",
+          "expected": "germany and poland",
+          "match": false
+        },
+        "expected_delivery": {
+          "actual": "before may",
+          "expected": "before may",
+          "match": true
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 2711
+    },
+    {
+      "id": "EN-08",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "kids tablets"
+          ],
+          "expected": [
+            "kids tablets"
+          ],
+          "match": true
+        },
+        "target_market": {
+          "actual": "germany",
+          "expected": "germany",
+          "match": true
+        },
+        "expected_delivery": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 2756
+    },
+    {
+      "id": "EN-09",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "smart water bottles"
+          ],
+          "expected": [
+            "smart water bottles"
+          ],
+          "match": true
+        },
+        "target_market": {
+          "actual": "japan",
+          "expected": "japan",
+          "match": true
+        },
+        "expected_delivery": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 2702
+    },
+    {
+      "id": "EN-10",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "smart led strip kits"
+          ],
+          "expected": [
+            "smart led strip kits"
+          ],
+          "match": true
+        },
+        "target_market": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        },
+        "expected_delivery": {
+          "actual": "by end of april",
+          "expected": "end of april",
+          "match": false
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 2404
+    },
+    {
+      "id": "EN-11",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "android tablets"
+          ],
+          "expected": [
+            "10.1-inch android tablets"
+          ],
+          "match": false
+        },
+        "target_market": {
+          "actual": "brazil",
+          "expected": "brazil",
+          "match": true
+        },
+        "expected_delivery": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 2514
+    },
+    {
+      "id": "EN-12",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "translator earbuds"
+          ],
+          "expected": [
+            "translator earbuds"
+          ],
+          "match": true
+        },
+        "target_market": {
+          "actual": "middle east",
+          "expected": "middle east",
+          "match": true
+        },
+        "expected_delivery": {
+          "actual": "as soon as possible",
+          "expected": "as soon as possible",
+          "match": true
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 2420
+    },
+    {
+      "id": "V2-25",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "anc earbuds",
+            "bluetooth speakers"
+          ],
+          "expected": [
+            "anc earbuds",
+            "bluetooth speakers"
+          ],
+          "match": true
+        },
+        "target_market": {
+          "actual": "germany",
+          "expected": "germany",
+          "match": true
+        },
+        "expected_delivery": {
+          "actual": "september",
+          "expected": "september",
+          "match": true
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 2860
+    },
+    {
+      "id": "V2-26",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "smart watches"
+          ],
+          "expected": [
+            "smart watches"
+          ],
+          "match": true
+        },
+        "target_market": {
+          "actual": "france",
+          "expected": "france",
+          "match": true
+        },
+        "expected_delivery": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 2682
+    },
+    {
+      "id": "V2-27",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "earbud"
+          ],
+          "expected": [
+            "earbud"
+          ],
+          "match": true
+        },
+        "target_market": {
+          "actual": "europe",
+          "expected": "europe",
+          "match": true
+        },
+        "expected_delivery": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 2975
+    },
+    {
+      "id": "V2-28",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "智能网关"
+          ],
+          "expected": [
+            "智能网关"
+          ],
+          "match": true
+        },
+        "target_market": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        },
+        "expected_delivery": {
+          "actual": "六周内",
+          "expected": "六周内",
+          "match": true
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 2685
+    },
+    {
+      "id": "V2-29",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "solar security cameras"
+          ],
+          "expected": [
+            "solar security cameras"
+          ],
+          "match": true
+        },
+        "target_market": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        },
+        "expected_delivery": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 2809
+    },
+    {
+      "id": "V2-30",
+      "ok": true,
+      "checks": {
+        "product_type": {
+          "actual": [
+            "wireless chargers"
+          ],
+          "expected": [
+            "wireless chargers"
+          ],
+          "match": true
+        },
+        "target_market": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        },
+        "expected_delivery": {
+          "actual": null,
+          "expected": null,
+          "match": true
+        }
+      },
+      "attempts": 1,
+      "repair_used": false,
+      "latency_ms": 2084
+    }
+  ]
+}

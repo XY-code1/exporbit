@@ -14,7 +14,6 @@ async function request(path, options = {}) {
   if (!response.ok) throw new Error(body?.error?.message || `请求失败（${response.status}）`)
   return body
 }
-
 export const inquiryApi = {
   list: ({query = '', status = ''} = {}) => {
     const params = new URLSearchParams()
@@ -24,4 +23,5 @@ export const inquiryApi = {
   },
   get: id => request(`/inquiries/${id}`),
   create: payload => request('/inquiries', {method: 'POST', body: JSON.stringify(payload)}),
+  extract: id => request(`/inquiries/${id}/extract`, {method: 'POST'}),
 }

@@ -65,6 +65,10 @@ class DeepSeekProvider:
         self._sleep = sleep
         self._client = httpx.AsyncClient(transport=transport, timeout=httpx.Timeout(self._timeout))
 
+    @property
+    def model_name(self) -> str:
+        return self._model
+
     async def close(self) -> None:
         await self._client.aclose()
 

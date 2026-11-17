@@ -1,0 +1,2796 @@
+{
+  "metadata": {
+    "kind": "synthetic",
+    "labeling": "human-authored; deterministic; no model grading",
+    "count": 30
+  },
+  "items": [
+    {
+      "id": "CN-01",
+      "language": "CN",
+      "category": "reviewed_legacy",
+      "raw_text": "你好，我们想采购 500 副无线蓝牙耳机，需要印我们的 Logo，发到德国，请报 FOB 深圳价。",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "无线蓝牙耳机",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [
+                "印 Logo"
+              ],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": "德国",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "target_price": {
+            "value": "FOB 深圳",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "CN-02",
+      "language": "CN",
+      "category": "reviewed_legacy",
+      "raw_text": "您好，请提供智能手表的报价。产品需要支持心率监测和 GPS，出口到法国市场。",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "智能手表",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": "法国",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "target_price": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "CN-03",
+      "language": "CN",
+      "category": "reviewed_legacy",
+      "raw_text": "我们计划采购一批蓝牙音箱，数量大概几千台，主要卖到东南亚。",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "蓝牙音箱",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": "东南亚",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "target_price": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "CN-04",
+      "language": "CN",
+      "category": "reviewed_legacy",
+      "raw_text": "请报 1000 台智能摄像头的价格，FOB 宁波。我们要求 6 月底前交货，产品需 CE 认证。",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "智能摄像头",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [
+                "CE 认证"
+              ],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": "6 月底前",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "target_price": {
+            "value": "FOB 宁波",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "CN-05",
+      "language": "CN",
+      "category": "reviewed_legacy",
+      "raw_text": "我们公司想买 2000 个智能门铃，目标价 15 美元以内，出货到美国。包装需要定制彩盒。",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "智能门铃",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [
+                "定制彩盒"
+              ],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": "美国",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "target_price": {
+            "value": "15 美元以内",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "CN-06",
+      "language": "CN",
+      "category": "reviewed_legacy",
+      "raw_text": "请问贵司有没有做便携式咖啡机？请发产品目录过来。",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "便携式咖啡机",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "target_price": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "CN-07",
+      "language": "CN",
+      "category": "reviewed_legacy",
+      "raw_text": "我们想采购 3000 条智能手环，主要市场是德国和波兰，交期希望 5 月前。",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "智能手环",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": "德国和波兰",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": "5 月前",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "target_price": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "CN-08",
+      "language": "CN",
+      "category": "reviewed_legacy",
+      "raw_text": "请报价 800 台儿童平板电脑，发往德国（CIF 汉堡），需要预装我们的教育软件和定制开机画面。",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "儿童平板电脑",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [
+                "预装教育软件和定制开机画面"
+              ],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": "德国",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "target_price": {
+            "value": "CIF 汉堡",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "CN-09",
+      "language": "CN",
+      "category": "reviewed_legacy",
+      "raw_text": "你们的智能水杯最小起订量是多少？我们想先试单，出口到日本。",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "智能水杯",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": "日本",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "target_price": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "CN-10",
+      "language": "CN",
+      "category": "reviewed_legacy",
+      "raw_text": "采购 1500 套智能灯带，EXW 广州，要求 4 月底交货，需要 CE 和 RoHS 证书。",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "智能灯带",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [
+                "CE 和 RoHS 证书"
+              ],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": "4 月底",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "target_price": {
+            "value": "EXW 广州",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "CN-11",
+      "language": "CN",
+      "category": "reviewed_legacy",
+      "raw_text": "您好，我们需要 600 台 10.1 英寸安卓平板，4GB+64GB，支持蓝牙 5.3，用于出口到巴西，请报 DDP 价。",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "10.1 英寸安卓平板",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": "巴西",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "target_price": {
+            "value": "DDP",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "CN-12",
+      "language": "CN",
+      "category": "reviewed_legacy",
+      "raw_text": "你好，我对你们的翻译耳机感兴趣，想了解批量采购的价格，主要面向中东市场，交期越快越好。",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "翻译耳机",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": "中东",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": "越快越好",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "target_price": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "EN-01",
+      "language": "EN",
+      "category": "reviewed_legacy",
+      "raw_text": "Hi, we are looking for 2,000 units of wireless earbuds with our logo printed, shipping to the UK. Please quote FOB Shenzhen.",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "wireless earbuds",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [
+                "logo printed"
+              ],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": "UK",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "target_price": {
+            "value": "FOB Shenzhen",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "EN-02",
+      "language": "EN",
+      "category": "reviewed_legacy",
+      "raw_text": "Hello, could you send us a quotation for smart watches with heart rate monitoring? We sell in the French market.",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "smart watches",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": "France",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "target_price": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "EN-03",
+      "language": "EN",
+      "category": "reviewed_legacy",
+      "raw_text": "We plan to order a batch of Bluetooth speakers, several thousand pieces, mainly for Southeast Asia.",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "Bluetooth speakers",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": "Southeast Asia",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "target_price": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "EN-04",
+      "language": "EN",
+      "category": "reviewed_legacy",
+      "raw_text": "Please quote 1,000 smart security cameras, FOB Ningbo. Delivery by end of June is required, CE certified.",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "smart security cameras",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [
+                "CE certified"
+              ],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": "end of June",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "target_price": {
+            "value": "FOB Ningbo",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "EN-05",
+      "language": "EN",
+      "category": "reviewed_legacy",
+      "raw_text": "Our company wants to buy 2,000 video doorbells with a target price under 15 USD, shipping to the US. Custom color box packaging needed.",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "video doorbells",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [
+                "custom color box packaging"
+              ],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": "US",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "target_price": {
+            "value": "under 15 USD",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "EN-06",
+      "language": "EN",
+      "category": "reviewed_legacy",
+      "raw_text": "Do you manufacture portable coffee machines? Please send us your catalog.",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "portable coffee machines",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "target_price": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "EN-07",
+      "language": "EN",
+      "category": "reviewed_legacy",
+      "raw_text": "We want to purchase 3,000 smart wristbands for the German and Polish markets, delivery before May.",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "smart wristbands",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": "Germany and Poland",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": "before May",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "target_price": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "EN-08",
+      "language": "EN",
+      "category": "reviewed_legacy",
+      "raw_text": "Please quote 800 kids tablets for Germany (CIF Hamburg) with our educational software pre-installed and custom boot screen.",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "kids tablets",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [
+                "educational software pre-installed and custom boot screen"
+              ],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": "Germany",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "target_price": {
+            "value": "CIF Hamburg",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "EN-09",
+      "language": "EN",
+      "category": "reviewed_legacy",
+      "raw_text": "What is your MOQ for smart water bottles? We want to start with a trial order for Japan.",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "smart water bottles",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": "Japan",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "target_price": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "EN-10",
+      "language": "EN",
+      "category": "reviewed_legacy",
+      "raw_text": "We need 1,500 smart LED strip kits, EXW Guangzhou, delivery by end of April, with CE and RoHS certificates.",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "smart LED strip kits",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [
+                "CE and RoHS certificates"
+              ],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": "end of April",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "target_price": {
+            "value": "EXW Guangzhou",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "EN-11",
+      "language": "EN",
+      "category": "reviewed_legacy",
+      "raw_text": "We require 600 units of 10.1-inch Android tablets, 4GB+64GB, Bluetooth 5.3, for export to Brazil. Please quote DDP.",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "10.1-inch Android tablets",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": "Brazil",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "target_price": {
+            "value": "DDP",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "EN-12",
+      "language": "EN",
+      "category": "reviewed_legacy",
+      "raw_text": "Hi, I'm interested in your translator earbuds and would like bulk pricing. We mainly target the Middle East, delivery as soon as possible.",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "translator earbuds",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": "Middle East",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": "as soon as possible",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "target_price": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "V2-25",
+      "language": "EN",
+      "category": "multiple_products",
+      "raw_text": "I am Anna from Nordlicht GmbH, anna@nordlicht.de. We need 500 ANC earbuds with our logo and 200 Bluetooth speakers, delivery to Germany in September. CE compliance required.",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "ANC earbuds",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          },
+          {
+            "product_type": {
+              "value": "Bluetooth speakers",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": "Germany",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": "September",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "target_price": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "V2-26",
+      "language": "CN-EN",
+      "category": "mixed_language",
+      "raw_text": "Hi，我们公司 BluePeak 想采购 smart watches，数量大概 1k 左右，target market 是 France，能做 private label 吗？",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "smart watches",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": "France",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "target_price": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "V2-27",
+      "language": "EN",
+      "category": "non_standard_english",
+      "raw_text": "need earbud maybe 2-3k pcs, ship europe, cert maybe CE? price pls. trial first not sure.",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "earbud",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": "Europe",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "target_price": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "V2-28",
+      "language": "CN",
+      "category": "missing_country",
+      "raw_text": "我们需要 300 台支持 Wi-Fi 6 的智能网关，贴牌包装，六周内交货。",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "智能网关",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": "六周内",
+            "status": "CONFIRMED",
+            "evidence": null
+          },
+          "target_price": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "V2-29",
+      "language": "EN",
+      "category": "ambiguous_quantity",
+      "raw_text": "Please quote solar security cameras. Initial order could be several cartons; quantity to be confirmed after samples.",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "solar security cameras",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "target_price": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    },
+    {
+      "id": "V2-30",
+      "language": "EN",
+      "category": "unclear_intent",
+      "raw_text": "Do you have RoHS or CE for wireless chargers? I am researching options and have no purchase plan yet.",
+      "expected": {
+        "customer": {
+          "customer_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "company_name": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "email": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "country": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        },
+        "products": [
+          {
+            "product_type": {
+              "value": "wireless chargers",
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "product_description": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "quantity_unit": {
+              "value": null,
+              "status": "INSUFFICIENT_DATA",
+              "evidence": null
+            },
+            "specifications": {
+              "value": {},
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "customization_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            },
+            "certification_requirements": {
+              "value": [],
+              "status": "CONFIRMED",
+              "evidence": null
+            }
+          }
+        ],
+        "business": {
+          "target_market": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "expected_delivery": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "target_price": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          },
+          "purchasing_intent": {
+            "value": null,
+            "status": "INSUFFICIENT_DATA",
+            "evidence": null
+          }
+        }
+      }
+    }
+  ]
+}
