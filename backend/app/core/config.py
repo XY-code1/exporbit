@@ -10,6 +10,7 @@ class Settings(BaseSettings):
 
     database_url: str = "postgresql+psycopg://exporbit:exporbit_dev@localhost:5432/exporbit"
     cors_origins: str = "http://localhost:5173,http://127.0.0.1:5173,http://localhost:4173,http://127.0.0.1:4173"
+    file_storage_path: Path = BACKEND_DIR / "uploads"
 
     # DeepSeek provider (server-side only; key comes from backend/.env and is never returned by the API)
     deepseek_api_key: str | None = None

@@ -80,3 +80,8 @@ class ExtractionResponse(BaseModel):
     model: str
     error_code: str | None = None
     created_at: str
+
+
+class ExtractionHistoryResponse(BaseModel):
+    items: list[ExtractionResponse]
+    total: int

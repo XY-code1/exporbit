@@ -28,7 +28,7 @@ requires_db = pytest.mark.skipif(not database_available(), reason="PostgreSQL te
 
 def _truncate(connection) -> None:
     try:
-        connection.execute(text("TRUNCATE inquiry_extractions, llm_runs, inquiries, customers RESTART IDENTITY CASCADE"))
+        connection.execute(text("TRUNCATE inquiry_files, inquiry_extractions, llm_runs, inquiries, customers RESTART IDENTITY CASCADE"))
     except Exception:
         # llm_runs may not exist yet if the latest migration has not been applied
         connection.execute(text("TRUNCATE inquiries, customers RESTART IDENTITY CASCADE"))

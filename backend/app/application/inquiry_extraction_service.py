@@ -16,17 +16,63 @@ from app.providers.contracts import LLMProvider, Message, MessageRole, ProviderE
 
 
 class InquiryExtractionService:
-    def __init__(self, session: Session, provider: LLMProvider):
+    def __init__(self, session: Session, provider: LLMProvider | None = None):
         self.session = session
         self.provider = provider
         self.inquiries = InquiryRepository(session)
         self.extractions = InquiryExtractionRepository(session)
         self.runs = LLMRunRepository(session)
 
+    @staticmethod
+    def _serialize(record: InquiryExtractionRecord) -> ExtractionResponse:
+        return ExtractionResponse(
+            extraction_id=str(record.id),
+            inquiry_id=str(record.inquiry_id),
+            structured_data=(
+                StructuredInquiryExtraction.model_validate(record.structured_data)
+                if record.structured_data is not None
+                else None
+            ),
+            extraction_status=record.status,
+            provider=record.provider_code,
+            model=record.model,
+            error_code=record.error_code,
+            created_at=record.created_at.isoformat(),
+        )
+
+    def get_latest(self, inquiry_id: UUID) -> ExtractionResponse | None:
+        inquiry = self.inquiries.get(inquiry_id)
+        if inquiry is None:
+            raise AppError("INQUIRY_NOT_FOUND", "Inquiry not found", 404, {"inquiry_id": str(inquiry_id)})
+        record = self.extractions.get_latest(inquiry_id)
+        return self._serialize(record) if record is not None else None
+
+    def list_history(self, inquiry_id: UUID) -> list[ExtractionResponse]:
+        inquiry = self.inquiries.get(inquiry_id)
+        if inquiry is None:
+            raise AppError("INQUIRY_NOT_FOUND", "Inquiry not found", 404, {"inquiry_id": str(inquiry_id)})
+        return [self._serialize(record) for record in self.extractions.list_for_inquiry(inquiry_id)]
+
+    def get_record(self, inquiry_id: UUID, extraction_id: UUID) -> ExtractionResponse:
+        inquiry = self.inquiries.get(inquiry_id)
+        if inquiry is None:
+            raise AppError("INQUIRY_NOT_FOUND", "Inquiry not found", 404, {"inquiry_id": str(inquiry_id)})
+        record = self.extractions.get(inquiry_id, extraction_id)
+        if record is None:
+            raise AppError(
+                "EXTRACTION_NOT_FOUND",
+                "Extraction record not found",
+                404,
+                {"inquiry_id": str(inquiry_id), "extraction_id": str(extraction_id)},
+            )
+        return self._serialize(record)
+
     async def extract(self, inquiry_id: UUID) -> ExtractionResponse:
         inquiry = self.inquiries.get(inquiry_id)
         if inquiry is None:
             raise AppError("INQUIRY_NOT_FOUND", "Inquiry not found", 404, {"inquiry_id": str(inquiry_id)})
+        if self.provider is None:
+            raise AppError("PROVIDER_UNAVAILABLE", "Extraction provider is unavailable", 503)
         started = time.perf_counter()
         data = None
         error_code = None
@@ -71,8 +117,4 @@ class InquiryExtractionService:
         ))
         self.session.commit()
         self.session.refresh(record)
-        return ExtractionResponse(
-            extraction_id=str(record.id), inquiry_id=str(inquiry.id), structured_data=data,
-            extraction_status=record.status, provider=record.provider_code, model=record.model,
-            error_code=record.error_code, created_at=record.created_at.isoformat(),
-        )
+        return self._serialize(record)

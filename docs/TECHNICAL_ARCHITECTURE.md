@@ -4,12 +4,12 @@
 
 ### 1.1 原型结构
 
-现有 `prototype/` 是单页 React 19 + Vite 6 演示应用。`App.jsx` 由 `Header`、`Nav`、`WorkHead`、`Snapshot`、`Matching`、`Knowledge`、`Reply`、`Actions`、`Import`、`Drawer` 等局部组件组成；没有路由、后端、网络请求或生产鉴权。
+现有 `prototype/` 是单页 React 19 + Vite 6 演示应用。`App.jsx` 由 `Header`、`Nav`、`WorkHead`、`Snapshot`、`Matching`、`Knowledge`、`Reply`、`Actions`、`Import`、`Drawer` 等局部组件组成；询盘列表、详情、文本/文件导入和结构化提取已接入 FastAPI，其他主要业务域仍是演示实现，且没有生产鉴权。
 
 | 能力 | 当前行为 | 判定 |
 |---|---|---|
-| 询盘列表、搜索、筛选、切换 | 内存中的固定数组；切换活动索引 | 可交互 DEMO |
-| 文本/PDF/图片/EML 导入 | 文本框和文件选择器可操作；900ms 定时器模拟解析；不会创建真实询盘 | 模拟 |
+| 询盘列表、搜索、筛选、切换 | 询盘列表与详情来自 API/PostgreSQL；搜索和筛选在当前列表执行 | API-backed |
+| 文本/PDF/图片/EML 导入 | 文本走询盘 API；文件 multipart 逐件解析并展示预览/成功失败；原文件、解析结果和元数据持久化 | P0 文件导入已接入 |
 | Snapshot | Nordlicht 固定数据，其他询盘为简化占位 | 静态/DEMO |
 | 产品匹配 | 可修改二维匹配状态并写入 localStorage | 可交互 DEMO |
 | 知乎研究 | 3 条硬编码内容、定时器模拟搜索、外链到知乎首页 | DEMO，非实时 API |
@@ -18,7 +18,7 @@
 | 数据持久化 | `tp_*` localStorage keys | 单浏览器演示，不是业务持久化 |
 | 构建/测试 | `npm run build`; `npm run test:sites`（4 tests） | 已验证通过 |
 
-状态由 React `useState` 和自定义 `useStored` 管理。没有集中 store。对当前规模这是合理的；真实 API 接入后再验证 TanStack Query。模拟行为来自硬编码数组和 `setTimeout`，没有 `fetch`/Axios。
+状态由 React `useState` 和自定义 `useStored` 管理。没有集中 store。对当前规模这是合理的；API client 使用 `fetch` 接入询盘流程，其余模拟行为仍来自硬编码数据和 `setTimeout`。
 
 ### 1.2 可复用资产
 

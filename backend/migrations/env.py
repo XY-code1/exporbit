@@ -6,6 +6,7 @@ from sqlalchemy import engine_from_config, pool
 from app.core.config import settings
 from app.infrastructure.database import Base
 from app.domains.inquiry.models import Customer, Inquiry  # noqa: F401
+from app.domains.inquiry.file_models import InquiryFile  # noqa: F401
 from app.domains.llm_run.models import LLMRun  # noqa: F401
 from app.domains.evidence.models import Evidence, Insight, InsightEvidence, SourceProvider  # noqa: F401
 from app.domains.extraction.models import InquiryExtractionRecord  # noqa: F401
@@ -32,4 +33,3 @@ def run_migrations_online() -> None:
 
 
 run_migrations_offline() if context.is_offline_mode() else run_migrations_online()
-

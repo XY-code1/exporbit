@@ -18,10 +18,25 @@
 | POST | `/inquiries` | 文本创建；返回重复候选但不自动合并 |
 | GET | `/inquiries/{id}` | 原始询盘与处理状态 |
 | PATCH | `/inquiries/{id}` | 人工修改允许字段 |
-| POST | `/inquiries/{id}/files` | PDF/图片/EML 上传 |
+| POST | `/inquiries/import` | multipart 批量上传 PDF/图片/EML；逐文件解析并创建询盘，返回成功/失败结果 |
+| GET | `/inquiries/{id}/files` | 查询询盘关联文件、解析预览与失败原因 |
+| POST | `/inquiries/{id}/extract` | 创建新的结构化提取记录；重试不覆盖历史 |
+| GET | `/inquiries/{id}/extractions/latest` | 查询最新提取记录；尚未提取时返回 `null` |
+| GET | `/inquiries/{id}/extractions` | 查询提取历史，包含成功和失败状态 |
+| GET | `/inquiries/{id}/extractions/{extraction_id}` | 查询指定提取记录 |
 | POST | `/inquiries/{id}/parse` | 启动/重试解析，返回 analysis run |
 | GET | `/inquiries/{id}/snapshot` | Level 1 聚合读取模型 |
 | GET | `/analysis-runs/{id}` | 轮询解析/研究/生成状态；MVP 不要求 WebSocket |
+
+### 已实现：提取记录读取与恢复
+
+- 上表中的 `/extract` 与三个 `/extractions` 端点已实现。读取只访问数据库，不创建 Provider、不调用模型。
+- 最新响应与 POST 提取响应结构相同，包含 `extraction_id`、`inquiry_id`、`structured_data`、`extraction_status`、`provider`、`model`、`error_code`、`created_at`。失败记录保留 `FAILED` 和错误码，`structured_data` 为 `null`，不会偷偷回退到旧成功结果。
+- 历史响应为 `{ "items": [...], "total": N }`；当前 P0 返回该询盘完整历史，不分页。最新和历史均按 `created_at DESC, id DESC` 排序；ID 仅作相同时间戳的稳定排序，不表示提交先后。
+- 询盘存在但尚未提取：最新返回 HTTP 200 / `null`，历史返回空列表。询盘不存在返回 `INQUIRY_NOT_FOUND` / 404；记录不存在或属于另一询盘返回 `EXTRACTION_NOT_FOUND` / 404。
+- 每次 POST（包括失败后重试、再次成功提取）均新增记录，不改旧记录，不修改询盘原文、人工字段或 revision。读取历史同样不会改变最新记录。
+- 工作台切换询盘或重新挂载页面时从 API 恢复最新成功/失败状态与历史；本地只保存选中询盘 ID，不把结果缓存作为数据库事实。可只读查看历史并返回最新。请求状态按询盘隔离，迟到读取不能覆盖更新结果。
+- 尚无生产鉴权，按询盘 ID 限定记录范围不是用户权限控制；提取记录读取端点本身没有新增数据库约束或迁移（文件导入另有文件元数据迁移）。
 
 ## 3. Customer、Product、Matching
 
