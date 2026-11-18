@@ -499,8 +499,9 @@ This diagram represents the intended architecture. Actual implementation status 
 | Evidence Provenance | PASS | `outputs/POC_05_VALIDATION_REPORT.md` |
 | 知乎 LIVE 获取 | NO-GO，保留 DEMO + 手工导入 | `docs/ZHIHU_PROVIDER_DECISION.md` |
 
-- 迁移链：`0001 → 0002 → 0003 → 0004`，head `20261117_0004`；dev 与 test 库均已验证。
-- 后端全量测试：77 passed。
+- 迁移链：`0001 → 0002 → 0003 → 0004 → 0005`，head `20261118_0005`；dev 与 test 库均已验证（0005 为阶段 1 的 `inquiry_files`）。
+- 后端全量测试：100 passed。
+- 原型前端：`npm run build`、`npm run test:sites`（4）、`npm run test:extractions`（9）、`npm run test:ui`（17）均通过。
 - 完整收口记录：`docs/STAGE_0_GATE_REPORT.md`。
 
 已完成：
@@ -517,6 +518,7 @@ This diagram represents the intended architecture. Actual implementation status 
 - DeepSeek 结构化抽取与业务路径接入（不可变 extraction 记录）
 - PDF/图片/EML 解析与页级溯源
 - Evidence provenance、快照哈希与 Provider 故障隔离
+- Evidence/Insight API（手工与 DEMO 证据采集、证据列表/详情、洞察创建与溯源查询）
 
 正在推进：
 

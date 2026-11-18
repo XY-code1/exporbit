@@ -66,6 +66,20 @@
 | GET/POST | `/inquiries/{id}/actions` | 查询/生成建议行动 |
 | PATCH | `/actions/{id}` | 修改、确认、完成、撤销确认 |
 
+### 已实现：Evidence 与 Insight 溯源 API
+
+- `GET /providers`：返回已登记 Provider 的 `code`、`category`、`display_name`、`mode`、`enabled`、`last_health_status`；不返回任何凭据或配置。
+- `GET /inquiries/{id}/evidence`：按 `captured_at` 倒序返回该询盘证据；每条包含快照文本、sha256、`snapshot_verified`、来源类别、Provider 模式、`is_demo`、可用性与可信状态。
+- `POST /inquiries/{id}/evidence`：
+  - `kind=MANUAL`：保存手工导入证据，服务端生成快照与哈希，记录 `captured_by`，固定 `provider_mode=MANUAL`、`is_demo=false`。
+  - `kind=PROVIDER`：仅执行已注册且具备适配器的 Provider。当前只有 `zhihu_demo`（DEMO）。`fixture_live` 是 POC 合成 fixture，不通过 API 暴露；`zhihu_live` 为 PLANNED，二者与未知/无适配器 Provider 均返回 409（未知 code 返回 404）。
+  - Provider 不可用不返回 5xx：响应为 `status=UNAVAILABLE`、稳定错误码（如 `PROVIDER_UNAVAILABLE`），不新增证据，历史证据与洞察不受影响。
+  - 成功返回 201 与 `{status, provider_code, provider_mode, evidence}`。
+- `GET /evidence/{id}`：来源、快照、哈希校验、可信状态，以及引用该证据的洞察（含 `support_type`）。
+- `GET/POST /inquiries/{id}/insights`：洞察必须关联至少一条本询盘证据；跨询盘引用返回 `EVIDENCE_INQUIRY_MISMATCH`，重复引用返回 `DUPLICATE_EVIDENCE_LINK`。本端点创建的洞察固定 `origin=HUMAN`，不把人工输入标成 AI 生成。
+- `GET /insights/{id}/provenance`：返回洞察及其全部证据链，逐条包含 `provider_mode`、`is_demo`、`captured_at`、`source_published_at`、`content_hash`、`snapshot_verified` 与快照文本。
+- P0 列表暂不分页，返回该询盘完整集合；尚无生产鉴权，按询盘 ID 限定范围不等于用户权限控制。
+
 ## 5. Communication
 
 | Method | Path | 用途 |

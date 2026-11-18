@@ -1,10 +1,12 @@
 from fastapi import FastAPI, Request
+from fastapi.encoders import jsonable_encoder
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from sqlalchemy import text
 from sqlalchemy.exc import SQLAlchemyError
 
+from app.api.evidence import router as evidence_router
 from app.api.inquiries import router as inquiries_router
 from app.core.config import settings
 from app.core.errors import AppError, app_error_handler
@@ -17,7 +19,7 @@ app.add_exception_handler(AppError, app_error_handler)
 
 @app.exception_handler(RequestValidationError)
 async def validation_error_handler(request: Request, exc: RequestValidationError):
-    return JSONResponse(status_code=422, content={"error": {"code": "VALIDATION_ERROR", "message": "Request validation failed", "details": {"errors": exc.errors()}, "request_id": request.headers.get("X-Request-ID")}})
+    return JSONResponse(status_code=422, content=jsonable_encoder({"error": {"code": "VALIDATION_ERROR", "message": "Request validation failed", "details": {"errors": exc.errors()}, "request_id": request.headers.get("X-Request-ID")}}))
 
 
 @app.exception_handler(SQLAlchemyError)
@@ -33,4 +35,5 @@ def health():
 
 
 app.include_router(inquiries_router, prefix="/api/v1")
+app.include_router(evidence_router, prefix="/api/v1")
 

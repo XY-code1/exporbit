@@ -99,7 +99,7 @@ class EvidenceService:
         self.seed_providers()
         return list(self.session.scalars(select(SourceProvider).order_by(SourceProvider.code)))
 
-    def _provider(self, code: str, *, require_enabled: bool = False) -> SourceProvider:
+    def get_provider(self, code: str, *, require_enabled: bool = False) -> SourceProvider:
         provider = self.session.scalar(select(SourceProvider).where(SourceProvider.code == code))
         if provider is None:
             self.seed_providers()
@@ -121,7 +121,7 @@ class EvidenceService:
         self, inquiry_id: UUID, provider: KnowledgeProvider, query: str
     ) -> CaptureOutcome:
         self._require_inquiry(inquiry_id)
-        row = self._provider(provider.code, require_enabled=True)
+        row = self.get_provider(provider.code, require_enabled=True)
         if row.mode != provider.mode.value or row.category != provider.category.value:
             raise AppError(
                 "PROVIDER_MISMATCH",
@@ -160,7 +160,7 @@ class EvidenceService:
         self._require_inquiry(inquiry_id)
         if source_category not in {category.value for category in SourceCategory}:
             raise AppError("SOURCE_CATEGORY_INVALID", "Unknown source category", 400, {"category": source_category})
-        row = self._provider("manual_import", require_enabled=True)
+        row = self.get_provider("manual_import", require_enabled=True)
         evidence = self._insert_evidence(
             inquiry_id,
             provider_id=row.id,
@@ -316,6 +316,41 @@ class EvidenceService:
             self.session.add(InsightEvidence(insight_id=insight.id, evidence_id=evidence_id, support_type=support_type))
         self.session.commit()
         return insight
+
+    def list_insights(self, inquiry_id: UUID) -> list[Insight]:
+        self._require_inquiry(inquiry_id)
+        return list(
+            self.session.scalars(
+                select(Insight)
+                .where(Insight.inquiry_id == inquiry_id)
+                .order_by(Insight.created_at.desc(), Insight.id.desc())
+            )
+        )
+
+    def insight_links(self, insight_ids: list[UUID]) -> dict[UUID, list[tuple[UUID, str]]]:
+        if not insight_ids:
+            return {}
+        links: dict[UUID, list[tuple[UUID, str]]] = {insight_id: [] for insight_id in insight_ids}
+        rows = self.session.scalars(
+            select(InsightEvidence)
+            .where(InsightEvidence.insight_id.in_(insight_ids))
+            .order_by(InsightEvidence.insight_id, InsightEvidence.evidence_id)
+        )
+        for row in rows:
+            links[row.insight_id].append((row.evidence_id, row.support_type))
+        return links
+
+    def evidence_insights(self, evidence_id: UUID) -> list[tuple[Insight, str]]:
+        self.get_evidence(evidence_id)
+        return [
+            (insight, support_type)
+            for insight, support_type in self.session.execute(
+                select(Insight, InsightEvidence.support_type)
+                .join(InsightEvidence, InsightEvidence.insight_id == Insight.id)
+                .where(InsightEvidence.evidence_id == evidence_id)
+                .order_by(Insight.created_at, Insight.id)
+            ).all()
+        ]
 
     def provenance(self, insight_id: UUID) -> InsightProvenance:
         insight = self.session.get(Insight, insight_id)
