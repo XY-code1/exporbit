@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "poc": "POC-05",
+    "ran_at": "2026-11-18T08:57:15.916960+00:00",
+    "inquiry_subject": "POC-05 synthetic provenance inquiry",
+    "synthetic": true,
+    "database": "local dev PostgreSQL",
+    "server_version": "16.2",
+    "migration_head": "20261117_0004"
+  },
+  "metrics": {
+    "insights_total": 1,
+    "insights_with_evidence": 1,
+    "evidence_total": 4,
+    "insight_links_total": 4,
+    "insight_links_resolved": 4,
+    "snapshot_verified_links": 4,
+    "snapshot_verify_rate": 1.0,
+    "content_hashes_sha256": 4,
+    "demo_evidence_total": 1,
+    "demo_evidence_labelled": 1,
+    "mode_flag_consistency_rate": 1.0,
+    "expired_link_status": "UNAVAILABLE",
+    "expired_link_snapshot_chars": 145,
+    "outage_status": "UNAVAILABLE",
+    "outage_error_code": "PROVIDER_UNAVAILABLE",
+    "evidence_after_outage": 4,
+    "provenance_intact_after_outage": true,
+    "planned_provider_enabled": false,
+    "passed": true
+  },
+  "checks": [
+    {
+      "step": "采集 LIVE / LIVE / DEMO / MANUAL 证据",
+      "expected": "4 条 CAPTURED",
+      "actual": "3 + 1 manual",
+      "passed": true
+    },
+    {
+      "step": "洞察证据链完整",
+      "expected": "4/4 条证据可解析",
+      "actual": "4/4",
+      "passed": true
+    },
+    {
+      "step": "快照哈希校验",
+      "expected": "100%",
+      "actual": "100.0%",
+      "passed": true
+    },
+    {
+      "step": "外链失效仍显示快照",
+      "expected": "UNAVAILABLE + 快照可读",
+      "actual": "UNAVAILABLE, 145 chars",
+      "passed": true
+    },
+    {
+      "step": "DEMO 强制标注",
+      "expected": "DEMO 全部 is_demo=true",
+      "actual": "1 条 DEMO，模式/标志一致 4/4",
+      "passed": true
+    },
+    {
+      "step": "Provider 离线隔离",
+      "expected": "UNAVAILABLE，不新增证据",
+      "actual": "UNAVAILABLE/PROVIDER_UNAVAILABLE，证据仍 4 条",
+      "passed": true
+    },
+    {
+      "step": "离线后洞察仍可解释",
+      "expected": "快照链路完好",
+      "actual": "links=4，verified=4",
+      "passed": true
+    },
+    {
+      "step": "PLANNED Provider 不可执行",
+      "expected": "disabled + PLANNED",
+      "actual": "enabled=False, mode=PLANNED",
+      "passed": true
+    },
+    {
+      "step": "洞察必须有证据",
+      "expected": "EVIDENCE_REQUIRED",
+      "actual": "EVIDENCE_REQUIRED",
+      "passed": true
+    }
+  ],
+  "insight": {
+    "id": "9d7175f5-8ccf-466d-8f2b-afc010a0cf10",
+    "statement": "回复客户时可以说明：欧盟/德国市场通常需要 CE 文件与包装回收标识，德语说明书可作为可选项向客户确认（依据证据时间 2026-10）。",
+    "status": "INFERRED",
+    "origin": "AI",
+    "revision": 1,
+    "evidence": [
+      {
+        "evidence_id": "c607ac50-6094-4a55-82b3-aeaa998dacbe",
+        "support_type": "SUPPORTS",
+        "title": "海外公开资料：欧盟无线耳机进口合规要点（合成 fixture）",
+        "canonical_url": "https://example.com/synthetic/eu-wireless-earbuds",
+        "provider_code": "fixture_live",
+        "provider_mode": "LIVE",
+        "source_category": "OVERSEAS",
+        "is_demo": false,
+        "availability_status": "UNAVAILABLE",
+        "captured_at": "2026-11-18T16:57:15.891206+08:00",
+        "source_published_at": "2026-10-01T08:00:00+08:00",
+        "content_hash": "cd66be90ac46f0aafd4cb4bb69658c5814b1dc5e9d3a33adcdce39b9a0970904",
+        "snapshot_verified": true,
+        "snapshot_chars": 145
+      },
+      {
+        "evidence_id": "aa412a96-43d7-47b3-97b2-592735a60c46",
+        "support_type": "CONTEXT",
+        "title": "海外公开资料：德国包装回收标识（合成 fixture）",
+        "canonical_url": "https://example.com/synthetic/de-packaging-label",
+        "provider_code": "fixture_live",
+        "provider_mode": "LIVE",
+        "source_category": "OVERSEAS",
+        "is_demo": false,
+        "availability_status": "AVAILABLE",
+        "captured_at": "2026-11-18T16:57:15.896019+08:00",
+        "source_published_at": "2026-10-01T08:00:00+08:00",
+        "content_hash": "dd532883b52ed244c35e8ea1eccb6c5ba10b0cb1dc2069525bc0f0cefdf4a58d",
+        "snapshot_verified": true,
+        "snapshot_chars": 107
+      },
+      {
+        "evidence_id": "a2ec54b4-01b2-42e6-a9a2-55ee515eaf72",
+        "support_type": "CONTEXT",
+        "title": "知乎演示：蓝牙耳机出口德国的常见问题（DEMO）",
+        "canonical_url": "https://demo.exporbit.local/zhihu/wireless-earbuds-germany",
+        "provider_code": "zhihu_demo",
+        "provider_mode": "DEMO",
+        "source_category": "ZHIHU",
+        "is_demo": true,
+        "availability_status": "AVAILABLE",
+        "captured_at": "2026-11-18T16:57:15.898254+08:00",
+        "source_published_at": null,
+        "content_hash": "4269bce407fe5656cbc448517a5e89040a5e3f3d748b7bd079f584c022c60c1b",
+        "snapshot_verified": true,
+        "snapshot_chars": 96
+      },
+      {
+        "evidence_id": "ad4b9f90-abe4-4c9f-9f11-451cf1cb9b19",
+        "support_type": "SUPPORTS",
+        "title": "客户邮件摘要（手工导入，合成）",
+        "canonical_url": null,
+        "provider_code": "manual_import",
+        "provider_mode": "MANUAL",
+        "source_category": "CUSTOMER_INQUIRY",
+        "is_demo": false,
+        "availability_status": "AVAILABLE",
+        "captured_at": "2026-11-18T08:57:15.900067+00:00",
+        "source_published_at": null,
+        "content_hash": "da1e7e6f371d4f2a69005e0842c2216d3af71104c662bf4b56857054391724ed",
+        "snapshot_verified": true,
+        "snapshot_chars": 59
+      }
+    ]
+  },
+  "providers": [
+    {
+      "code": "fixture_live",
+      "mode": "LIVE",
+      "category": "OVERSEAS",
+      "enabled": true,
+      "last_health_status": "UNAVAILABLE"
+    },
+    {
+      "code": "manual_import",
+      "mode": "MANUAL",
+      "category": null,
+      "enabled": true,
+      "last_health_status": null
+    },
+    {
+      "code": "zhihu_demo",
+      "mode": "DEMO",
+      "category": "ZHIHU",
+      "enabled": true,
+      "last_health_status": "AVAILABLE"
+    },
+    {
+      "code": "zhihu_live",
+      "mode": "PLANNED",
+      "category": "ZHIHU",
+      "enabled": false,
+      "last_health_status": null
+    }
+  ]
+}

@@ -18,7 +18,7 @@ PROJECT_DIR = BACKEND_DIR.parent
 OUTPUTS_DIR = PROJECT_DIR / "outputs"
 sys.path.insert(0, str(BACKEND_DIR))
 
-from sqlalchemy import delete, select  # noqa: E402
+from sqlalchemy import delete, select, text  # noqa: E402
 
 from app.core.errors import AppError  # noqa: E402
 from app.domains.evidence.models import Insight  # noqa: E402
@@ -45,6 +45,10 @@ def pct(value: float) -> str:
 
 
 def reset_synthetic_rows(session) -> None:
+    inquiry_ids = select(Inquiry.id).where(Inquiry.subject == SUBJECT)
+    # Insights must go first: insight_evidence -> evidence is RESTRICT, so evidence
+    # cannot be cascade-deleted while a prior insight still references it.
+    session.execute(delete(Insight).where(Insight.inquiry_id.in_(inquiry_ids)))
     session.execute(delete(Inquiry).where(Inquiry.subject == SUBJECT))
     session.commit()
 
@@ -98,7 +102,7 @@ def run_scenario() -> dict:
                 (first.evidence_id, "SUPPORTS"),
                 (second.evidence_id, "CONTEXT"),
                 (demo.evidence_id, "CONTEXT"),
-                (manual.evidence_id, "SUPPORTS"),
+                (manual.id, "SUPPORTS"),
             ],
         )
 
@@ -110,6 +114,8 @@ def run_scenario() -> dict:
         provenance = service.provenance(insight.id)
         insight_rows = list(session.scalars(select(Insight).where(Insight.inquiry_id == inquiry.id)))
         provider_rows = service.list_providers()
+        migration_head = session.execute(text("select version_num from alembic_version")).scalar_one()
+        server_version = session.execute(text("show server_version")).scalar_one()
 
         links = provenance.evidence
         resolved_links = [item for item in links if item.title and item.provider_mode and item.snapshot_chars > 0]
@@ -164,7 +170,9 @@ def run_scenario() -> dict:
                 "ran_at": datetime.now(timezone.utc).isoformat(),
                 "inquiry_subject": SUBJECT,
                 "synthetic": True,
-                "database": "local dev (rows replaced on each run)",
+                "database": "local dev PostgreSQL",
+                "server_version": server_version,
+                "migration_head": migration_head,
             },
             "metrics": metrics,
             "checks": checks,
@@ -225,7 +233,7 @@ def build_report(results: dict) -> str:
     lines.append("# Exporbit POC-05 验证报告：Evidence Provenance")
     lines.append("")
     lines.append(f"- 验证时间（UTC）：{results['meta']['ran_at']}")
-    lines.append(f"- 环境：本地 dev PostgreSQL；迁移 `20261116_0003`；每次运行替换同名合成询盘数据")
+    lines.append(f"- 环境：本地 dev PostgreSQL {results['meta']['server_version']}；迁移链 0001→0002→0003→0004（head `{results['meta']['migration_head']}`）；每次运行替换同名合成询盘数据")
     lines.append(f"- 数据：合成询盘（{results['meta']['inquiry_subject']}）、LIVE-like fixture、知乎 DEMO 固定文本、手工导入；不含真实客户或外部来源内容")
     lines.append(f"- 结论：**{verdict}**")
 

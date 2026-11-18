@@ -487,7 +487,21 @@ This diagram represents the intended architecture. Actual implementation status 
 
 当前阶段：
 
-**Product Design Completed → Interactive Prototype Validation → Technical Selection & POC**
+**阶段 0（架构评审与 POC）技术闸门已关闭 → 阶段 1（Inquiry Foundation）准备中**
+
+阶段 0 结论（2026-11-18）：
+
+| 闸门 | 结果 | 证据 |
+|---|---|---|
+| PostgreSQL 持久化 + 前后端纵向切片 | PASS | `outputs/POC_01_VALIDATION_REPORT.md` |
+| DeepSeek 结构化抽取（含 V2 业务接入） | PASS | `outputs/POC_02_VALIDATION_REPORT.md`、`outputs/POC_02_V2_VALIDATION_REPORT.md` |
+| PDF/图片/EML 解析 | PASS | `outputs/POC_03_VALIDATION_REPORT.md` |
+| Evidence Provenance | PASS | `outputs/POC_05_VALIDATION_REPORT.md` |
+| 知乎 LIVE 获取 | NO-GO，保留 DEMO + 手工导入 | `docs/ZHIHU_PROVIDER_DECISION.md` |
+
+- 迁移链：`0001 → 0002 → 0003 → 0004`，head `20261117_0004`；dev 与 test 库均已验证。
+- 后端全量测试：77 passed。
+- 完整收口记录：`docs/STAGE_0_GATE_REPORT.md`。
 
 已完成：
 
@@ -499,21 +513,21 @@ This diagram represents the intended architecture. Actual implementation status 
 - 桌面端低保真设计
 - 高保真 UI 探索
 - 第一版交互原型
+- 后端最小骨架、迁移与 inquiry API 纵向切片
+- DeepSeek 结构化抽取与业务路径接入（不可变 extraction 记录）
+- PDF/图片/EML 解析与页级溯源
+- Evidence provenance、快照哈希与 Provider 故障隔离
 
 正在推进：
 
-- 交互原型端到端验收
-- DEMO 数据与真实数据边界检查
-- 技术选型
-- 技术验证计划
+- 阶段 1：Inquiry 列表/创建、文件元数据、解析运行与 Snapshot 从原型固定数据迁移到 API
+- 人工编辑保护、revision/409 与基础审计
 
 尚未完成：
 
-- 生产级后端
-- 真实知乎搜索接入
-- 真实海外搜索接入
-- 完整数据持久化
-- 生产环境部署
+- 阶段 2–5 的 MVP 业务能力
+- 知乎实时接入（NO-GO）、真实海外搜索与官方来源接入
+- 生产环境部署、备份恢复与监控
 
 不要将原型中模拟的功能描述为已经实现的生产能力。
 
@@ -537,6 +551,8 @@ docs/
 ├── API_DESIGN.md
 ├── PROVIDER_DESIGN.md
 ├── POC_VALIDATION_PLAN.md
+├── STAGE_0_GATE_REPORT.md
+├── ZHIHU_PROVIDER_DECISION.md
 └── DEVELOPMENT_ROADMAP.md
 ```
 
